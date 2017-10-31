@@ -1,0 +1,78 @@
+/*******************
+General Styles
+*********************/
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-ms-overflow-style: scrollbar;
+}
+body {
+	background: $white-color;
+	font: 400 12px/1.8 $font-roboto;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%
+}
+a:active, a:hover {
+	outline-width: 0
+}
+
+
+iframe {
+	border: 0;
+}
+::-moz-selection {
+	background: $gray-dark;
+	color: $white-color;
+}
+::focus {
+    outline: 0;
+}
+
+::-webkit-selection{
+	background: $gray-dark;
+	color: $white-color;
+}
+::selection{
+	background: $gray-dark;
+	color: $white-color;
+}
+.hideOverflow{
+	overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.form-control,
+.navbar-custom,
+.navbar-custom .navbar-brand {
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	   -moz-transition: all 0.4s ease-in-out 0s;
+		-ms-transition: all 0.4s ease-in-out 0s;
+		 -o-transition: all 0.4s ease-in-out 0s;
+			transition: all 0.4s ease-in-out 0s;
+}
+
+a,
+.btn,
+.navbar a {
+	-webkit-transition: all 0.125s ease-in-out 0s;
+	   -moz-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+		 -o-transition: all 0.125s ease-in-out 0s;
+			transition: all 0.125s ease-in-out 0s;
+}
+/* Reset box-shadow */
+
+.btn,
+.well,
+.panel,
+.progress,
+.progress-bar,
+.form-control,
+.form-control:hover,
+.form-control:focus,
+.navbar-custom .dropdown-menu {
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}

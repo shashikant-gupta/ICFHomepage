@@ -1,0 +1,22 @@
+// Partials dependencies
+@import "partials/typography";
+
+
+
+// Modules, Variables, Functions and mixins
+@import "components/mixins";
+
+// Media screen and Color
+@import "components/media";
+@import "components/color";
+@import "components/variables";
+
+// Core Components
+@import "components/buttons";
+//@import "components/carousel";
+
+// Partials base styles
+@import "partials/base";
+
+//Why Book Us
+@import "layout/whybookus";

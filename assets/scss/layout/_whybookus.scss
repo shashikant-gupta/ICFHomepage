@@ -1,0 +1,78 @@
+/*******************
+WhyBookUs Styles
+*********************/
+
+.latesteals-warp { 
+	position:relative;
+	color:$white;
+	font-family: $Montserrat;
+	font-weight:normal;
+	@extend .fullWidth;
+	.deals-content {
+		 background: rgba($back, 0.5);
+		 position:absolute;
+		 bottom:0; 
+		 width:100%;
+		 padding:5px;
+		 display: table;
+		 ul{
+		 	list-style-type: none;
+		 	outline: none;
+		 	padding:0;
+		 	margin:0;
+
+		 	li{
+			 	width: 50%; 
+			 	display: table-cell;
+			 	font-size: 14px;
+			 	vertical-align: bottom;
+			 	@extend .positionRel;
+				 	strong{ 
+				 		color: $yellow;
+				 	}
+				 	span{ 
+				 		font-size:18px;
+				 	}
+		 	}
+		 }
+		 .lastDeal-price{
+		 	display:table-cell;
+		 	vertical-align: bottom;		 	
+		 	
+		 }
+	}
+}
+.WhyBookUs-bg{ 
+	background:$lightBlack;	
+	p{
+		font-size: 12px;
+	}
+}
+.whyBookUs-Icon{ width:28%; float:left;}
+.whyBookUs-txt{ width:70%; 
+				float:right; 
+				color:$white;
+				ul{ list-style-type:none;
+					padding-left:0;
+					li{ 
+						line-height:24px;
+						font-size:10px;
+
+						&:before{
+							display:inline-block;
+							content:'-';
+						}
+					}
+				}
+}
+.exclusiveDeals{
+	margin:19px 0;
+	input[type]{ 
+		background:$white;
+		-webkit-box-shadow: none;
+  		-moz-box-shadow: none;
+ 		 box-shadow:  none;
+ 		 border:none;
+	}
+	span{ background:$yellow; color:$back; border:none;}
+}
