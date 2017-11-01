@@ -130,11 +130,9 @@
 @mixin icf-spritimg($position) {
 	width: 100px;height:100px;   
 	background:{
-		image: url($theme-iconsPath);
-        position: $position;
+		image: url($theme-iconsPath+$sprite-iconPath);
+		position: $position;
         repeat: no-repeat;
-        display: inline-block;
-
-
-	}
+	} 
+	display: inline-block;
 }
