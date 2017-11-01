@@ -53,7 +53,7 @@ WhyBookUs Styles
 	float:left;
 	span{
 	&.icf-spritimg{
-		@include icf-spritimg;
+		@include icf-spritimg (0 0);
 	}			
 		
 	}
