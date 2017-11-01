@@ -43,14 +43,22 @@ WhyBookUs Styles
 	}
 }
 .WhyBookUs-bg{ 
-	background:$lightBlack;	
+	background:$WhyBookUs-bgColor;	
 	p{
 		font-size: 12px;
 	}
 }
-.whyBookUs-Icon{ width:28%; float:left;}
-.whyBookUs-txt{ width:70%; 
-				float:right; 
+.whyBookUs-Icon{ 
+	width:28%; 
+	float:left;
+	span{
+	&.icf-spritimg{
+		@include icf-spritimg;
+	}			
+		
+	}
+}
+.whyBookUs-txt{ width:70%; 				
 				color:$white;
 				ul{ list-style-type:none;
 					padding-left:0;
@@ -68,11 +76,8 @@ WhyBookUs Styles
 .exclusiveDeals{
 	margin:19px 0;
 	input[type]{ 
-		background:$white;
-		-webkit-box-shadow: none;
-  		-moz-box-shadow: none;
- 		 box-shadow:  none;
- 		 border:none;
+		@include box-shadow(none);		
+		@include placeholder($placeholder-color, 12px) ;
 	}
 	span{ background:$yellow; color:$back; border:none;}
 }
