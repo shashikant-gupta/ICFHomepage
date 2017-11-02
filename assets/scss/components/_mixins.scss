@@ -127,8 +127,9 @@
 	&:-moz-placeholder { color: $placeholder; font-size:$fontSize;}
 }
 
-@mixin icf-spritimg($position) {
-	width: 100px;height:100px;   
+@mixin icf-spritimg($position, $width, $height) {
+	width: $width;
+	height:$height;   	
 	background:{
 		image: url($theme-iconsPath+$sprite-iconPath);
 		position: $position;
