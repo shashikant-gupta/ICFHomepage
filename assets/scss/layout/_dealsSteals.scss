@@ -57,6 +57,12 @@
 	background:$black;
 	max-height:247px;
 	width:100%;	
+	button{
+		color: $black;
+		background:$white;
+		position:absolute;
+		z-index: 2;
+	}
 	.dealsDeatails{
 		position:absolute;
 		bottom:0;
