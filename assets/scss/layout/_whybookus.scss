@@ -80,5 +80,11 @@ WhyBookUs Styles
 		@include box-shadow(none);		
 		@include placeholder($placeholder-color, 12px) ;
 	}
-	span{ background:$yellow; color:$black; border:none;}
+	span{ 
+		background:$yellow; 
+		color:$black; 
+		border:none;
+		@include text-shadow($tShadow : 0 0 0 rgba(0,0,0,.8));
+		cursor:pointer;
+	}
 }

@@ -3,7 +3,7 @@
 // =================================
 $yellow:             #fec72f;
 $brightYellow:       #fcee18;
-$black:               #000000;
+$black:              #000000;
 $lightBlack:         #393939;
 $darkBlue:           #0c1247;
 $Blue:               #131b6c;
@@ -23,3 +23,15 @@ $DealsSteals-bgColor:$Blue;
 
 
 
+
+$alpha : 0.5;
+$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
+// For Font Weight styles
+$weight-light:          300;
+$weight-normal:         400;
+$weight-semibold:       600;
+$weight-bold:           700;
+
+//For RTL, Use It For Floatation
+$left: left;
+$right: right;
