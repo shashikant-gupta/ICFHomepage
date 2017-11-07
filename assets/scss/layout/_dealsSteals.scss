@@ -34,7 +34,7 @@
 				display: inline-block;
 				font-size: 18px;
 				color:$lightBlue;
-				padding:10px 47px;
+				padding:1% 4%;
 				margin:0 36px;
 				font-weight: 500;
 				&:hover,&.active{
@@ -57,11 +57,11 @@
 			@extend .padng-none;
 			list-style-type: none;
 			list-style: none;
-			margin-left: -8px;
-			margin-right: -8px;
+			//margin-left: -8px;
+			//margin-right: -8px;
 			> li{
-				width: 23.333%;
-				margin: 0 7px 15px 7px;
+				width: 23%;
+				margin: 0 0.8% 2% 0.8%;
 				@extend .padng-none;
 				list-style-type: none;
 				list-style: none;
