@@ -1,0 +1,38 @@
+.footer-bg{
+	background: $footer-bgcolor;	
+	font-family: $Montserrat;
+	color: $heading-txt;
+}
+
+.sitemap{
+	ul{
+		list-style: disc;
+		outline: none;
+		padding-left: 15px;
+		line-height: 22px;
+		color: $color-main;
+		li{
+			a{
+				text-decoration: none;
+				cursor: pointer;
+				color: $color-main;
+				font-size: 13px;
+				&:hover{
+					color: $text-hover;
+				}
+			}
+		}
+	}
+}
+.tfoot-subscribe{
+	.form-control{
+		@include border-left-radius(0);
+		@extend .subscribe-input;
+		border:none;
+	}
+	.btn.subscribe-btn{
+			@include border-right-radius(0);
+			@extend .input-btn;	
+						
+		}
+}
