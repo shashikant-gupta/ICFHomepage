@@ -84,6 +84,7 @@ WhyBookUs Styles
 		.btn{ 
 			@extend .input-btn;	
 			@extend .padng-none;
+			border:none;
 			 }
 	}
 }
