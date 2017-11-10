@@ -82,3 +82,27 @@ Base Styles
 	@include box-shadow(none);		
 		@include placeholder($placeholder-color, 12px) ;
 }
+
+.dealHeading{
+		@extend .marg-btm30;
+		h1.background-line {
+			position: relative;
+			z-index: 1;
+			margin-bottom: 0;
+
+			&:before {
+				border-top: 2px solid #dfdfdf;
+				content:"";
+				margin: 0 auto;
+				position: absolute; 
+				top: 50%; left: 0; right: 0; bottom: 0;
+				width: 60%;
+				z-index: -1;
+			}
+			span { 
+				background: $DealsSteals-bgColor;
+				padding: 0 15px; 
+			}
+		}
+		
+	}

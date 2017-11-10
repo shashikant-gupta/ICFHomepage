@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <!-- Bootstrap -->
   <link href="assets/css/libs/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/libs/jquery-ui.css" media="all">
+  <link rel="stylesheet" href="assets/css/libs/jquery-ui.min.css" media="all">
   <!-- Plugins -->
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
   <link rel="stylesheet" href="assets/css/libs/animate.min.css"> 
@@ -34,21 +34,32 @@
   </head>
   <body>
     <!-- Wrap all page content here -->
+    
+
     <header id="header">
       <div class="container">
         <div class="row">
           <a href="#" class="logo pull-left"><img src="./assets/images/icons/icf_logo.png" alt="myflightsearch"></a>
-          <nav>
+          
+          <div class="col-sm-4 col-md-3 pull-right call-support text-center">
+            <div class="support">
+              <a href="#"><span class="cust-support"></span> Customer Support</a> <a href="#"><span class="Reservations"></span> My Reservations</a>
+            </div>
+            <a href="" class="toll-free" title="Call Us 24/7 for Lowest Airfares"><span></span>1-855-757-9193</a>
+          </div>
+          <nav class="col-lg-6 pull-right">
             <ul>
-              <li>Flights</li>
-              <li>Travel Deals</li>
               <li>Top US Destinations</li>
+              <li>Travel Deals</li>
+              <li class="active">Flights</li>            
             </ul>
           </nav>
-          
+
         </div>
       </div>      
     </header><!-- /header -->
+
+
 
     <section class="container ">
       <div class="row marg-top-btm30">
@@ -56,7 +67,7 @@
         <div class="col-sm-4 padng-left padng-right5">
           <article class="latesteals-warp">
             <figure>
-              <img src="./assets/images/latestDeals.jpg" width="100%"  alt="Top Deals"/>
+              <img src="./assets/images/latestDeals.jpg" width="100%"  height="134" alt="Top Deals"/>
             </figure>
             <div class="deals-content">
               <ul>
@@ -71,9 +82,7 @@
 
         <div class="col-sm-4 padng5">
           <article class="WhyBookUs-bg clearfix latesteals-warp">
-            <div class="whyBookUs-Icon visible-lg text-center">
-              <span class="icf-spritimg">  </span>
-            </div>
+              <span class="icf-spritimg whyBookUs-Icon">  </span>
               <div class="whyBookUs-txt pull-right">
                 <h4>Why Book With Us?</h4>
                 <ul>
@@ -83,8 +92,7 @@
                   <li> 24 / 7 Customer Service and Support</li >
                 </ul>                
             </div>              
-          </article>                       
-          
+          </article>                                 
         </div>
 
         <div class="col-sm-4 padng-right padng-left5">
@@ -98,11 +106,13 @@
               </div>
               
             </form>
-          </article>
-          
+          </article>          
         </div>
-    </div>
+
+    </div>    
     </section>
+ 
+
     <div class="clearfix"></div>
     <!-- Deals & Steals -->
     <section class="container-bg">

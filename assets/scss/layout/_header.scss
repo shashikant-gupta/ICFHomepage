@@ -2,9 +2,75 @@
 #header{
 	background: $header-bg;
 	border-top: solid 2px $yellow;
+	color: $heading-txt;
 	a{
 		&.logo{
-			margin:10px 0;
+			margin:10px 0 5px 0;
 		}
 	}
+
+	nav{
+		ul{
+			list-style-type: none;
+			margin-bottom: 0;
+			padding-left: 0;
+			li{
+				display: inline-block;
+				float: right;
+				padding: 0 15px;		 
+				line-height: 84px;
+				&:hover, &.active{
+				background: $button-color;
+				color: $DealsSteals-bgColor;
+				
+			}
+			}			
+		}
+	}
+}
+.call-support{	
+	margin:10px 0;
+	.support{
+		margin-bottom: 2px;
+		span{
+			display: inline-block;
+			margin-bottom: -2px;
+		}
+		a{
+		display: inline-block;
+		color: $heading-txt;
+		font-size: $font-size-small;
+		padding-left:5px;
+		color: $heading-txt;
+		cursor: pointer;
+		text-decoration: none;
+		@media screen and (max-width: $desktop-screen-lg) {
+							font-size: 9px;
+						}
+		 .cust-support{	
+		 	@include icf-spritimg(-148px -8px, 20px, 16px);
+		 }
+		 .Reservations{
+		 	@include icf-spritimg(-114px -7px, 20px, 16px);		 	
+		 }
+
+	}
+	
+
+	}
+	.toll-free{
+		text-decoration: none;
+		font-size: 30px;		
+		font-weight: $weight-semibold;
+		color: $heading-txt;
+		cursor: default;
+		span{
+			@include icf-spritimg(-69px 0px, 38px, 30px);
+			margin-bottom: -4px;
+		}
+		@media screen and (max-width: $desktop-screen-lg) {
+							font-size: 22px;
+						}	
+	}
+
 }
