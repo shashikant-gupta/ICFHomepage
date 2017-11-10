@@ -1,1 +1,10 @@
 @import 'navigation';
+#header{
+	background: $header-bg;
+	border-top: solid 2px $yellow;
+	a{
+		&.logo{
+			margin:10px 0;
+		}
+	}
+}

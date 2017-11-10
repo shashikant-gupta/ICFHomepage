@@ -51,6 +51,7 @@
 	.icfstatic_deals{
 		@include fullRow;
 		    padding-top: 10px;
+		    min-height: 300px;
 		ul{
 			display: block;
 			 text-align: center;
@@ -59,19 +60,20 @@
 			list-style: none;
 			//margin-left: -8px;
 			//margin-right: -8px;
-			> li{
+			> li{				
 				width: 23%;
 				margin: 0 0.8% 2% 0.8%;
 				@extend .padng-none;
 				list-style-type: none;
 				list-style: none;
 				display: inline-block;
-				text-align: center;
-				&.items-filter{
-					&.Domestic, &.International, &.MorDeals{
-						display: none;
-					}
+				text-align: center;	
+				/*&.hot-deal{
+					display: inline-block;
 				}
+				&.domestic-deal, &.international-deal, &.morDeals-deal{
+					display: none;
+				}*/		
 			}
 		}
 		.dealgrid-item{ 

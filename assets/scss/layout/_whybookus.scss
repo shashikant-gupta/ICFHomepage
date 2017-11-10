@@ -44,6 +44,7 @@ WhyBookUs Styles
 }
 .WhyBookUs-bg{ 
 	background:$WhyBookUs-bgColor;	
+	padding:5px;
 	p{
 		font-size: 12px;
 	}
@@ -59,12 +60,16 @@ WhyBookUs Styles
 		
 	}
 }
-.whyBookUs-txt{ width:70%; 				
+.whyBookUs-txt{ 
+ @media screen and (max-width: $desktop-screen-lg) {
+ 	width: 100%;
+ }
+	width:70%; 				
 				color:$white;
 				ul{ list-style-type:none;
 					padding-left:0;
 					li{ 
-						line-height:24px;
+						line-height:20px;
 						font-size:10px;
 
 						&:before{
@@ -84,7 +89,7 @@ WhyBookUs Styles
 		.btn{ 
 			@extend .input-btn;	
 			@extend .padng-none;
-			border:none;
+			border:none; 
 			 }
 	}
 }

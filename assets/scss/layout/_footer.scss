@@ -1,8 +1,10 @@
 .footer-bg{
 	background: $footer-bgcolor;	
 	font-family: $Montserrat;
-	color: $heading-txt;
+	color: $heading-txt;	
 }
+
+.top-border{ border-top:solid 1px rgba(255, 255, 255, 0.1);  }
 
 .sitemap{
 	ul{
@@ -11,6 +13,7 @@
 		padding-left: 15px;
 		line-height: 22px;
 		color: $color-main;
+		margin-bottom: 0;
 		li{
 			a{
 				text-decoration: none;
@@ -24,6 +27,21 @@
 		}
 	}
 }
+
+.signup{
+	h5{
+		line-height: 18px;
+	}
+	.callus-txt{
+		display: block;
+		margin-top: 10px;	
+		font-size: 13px;	
+	}
+	h3{
+		margin-top: 2px;
+	}
+}
+
 .tfoot-subscribe{
 	.form-control{
 		@include border-left-radius(0);
@@ -35,4 +53,14 @@
 			@extend .input-btn;	
 						
 		}
+}
+
+.partners-row{
+	font-size:$font-size-small;
+	.payment-icon{ @include icf-spritimg(9px -323px, 395px, 43px);	}
+	img{margin-top:15px;}
+} 
+
+.note-txt{
+	color:$color-main;
 }
