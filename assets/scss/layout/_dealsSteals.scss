@@ -13,8 +13,18 @@
 				font-size: 18px;
 				color:$lightBlue;
 				padding:1% 4%;
-				margin:0 36px;
+				margin:0 3%;
 				font-weight: 500;
+				 @media screen and (max-width: $desktop-screen-lg) {
+    	  				margin:0 2%;
+    	            }
+    	        @media screen and (max-width: $laptops-screen-md) {
+    	  				margin:0 0;
+    	            }	   
+    	            @media screen and (max-width: $tablet-width) {
+    	  				padding:1% 1%;
+    	            }  
+    	            
 				&:hover,&.active{
 					background:$yellow;
 					@include border-top-radius(4px);
@@ -46,12 +56,9 @@
 				list-style: none;
 				display: inline-block;
 				text-align: center;	
-				/*&.hot-deal{
-					display: inline-block;
-				}
-				&.domestic-deal, &.international-deal, &.morDeals-deal{
-					display: none;
-				}*/		
+				@media screen and (max-width: $tablet-width) {	    	  				
+	    	  				width: 31%;
+	    	            }
 			}
 		}
 		.dealgrid-item{ 
@@ -75,6 +82,12 @@
 					right:0;		
 					width: 110px; height:40px; font-size:18px; font-weight:500; border:none;
 					vertical-align: middle;
+						@media screen and (max-width: $laptops-screen-md) {
+	    	  				left:18%;
+	    	            }	   
+	    	            @media screen and (max-width: $tablet-width) {	    	  				
+	    	  				left:25%;
+	    	            } 	            
 					&:hover, &:focus, &:active {
 						color: white;
 					}
