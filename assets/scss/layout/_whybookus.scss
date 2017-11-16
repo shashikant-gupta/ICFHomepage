@@ -85,7 +85,10 @@ WhyBookUs Styles
 						}
 						@media only screen and (min-width : $tablet-width) and (max-width : $laptops-screen-md) {
 							line-height: 13px;
-						}							
+						}		
+						@media screen and (max-width: $tablet-width) {
+							line-height: 20px;
+						}					
 					}
 				}
 }

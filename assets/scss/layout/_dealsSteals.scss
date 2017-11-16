@@ -15,6 +15,7 @@
 				padding:1% 4%;
 				margin:0 3%;
 				font-weight: 500;
+				position:relative;
 				 @media screen and (max-width: $desktop-screen-lg) {
     	  				margin:0 2%;
     	            }
@@ -36,6 +37,10 @@
 		}
 	}
 	//icf deals iteam group here
+	.tabs_item{
+		display: none;
+	padding: 30px 0;
+	}
 	.icfstatic_deals{
 		@include fullRow;
 		    padding-top: 10px;
@@ -46,8 +51,6 @@
 			@extend .padng-none;
 			list-style-type: none;
 			list-style: none;
-			//margin-left: -8px;
-			//margin-right: -8px;
 			> li{				
 				width: 23%;
 				margin: 0 0.8% 2% 0.8%;
@@ -55,48 +58,111 @@
 				list-style-type: none;
 				list-style: none;
 				display: inline-block;
-				text-align: center;	
 				@media screen and (max-width: $tablet-width) {	    	  				
 	    	  				width: 31%;
 	    	            }
 			}
-		}
-		.dealgrid-item{ 
-			position:relative;
-			font-size:12px;
-			background:$black;
-			min-height:247px;
-			width:100%;	
-			@include transition($transitionvalue : all .25s ease-in-out);
-			> a{ 
-				display:block;
-				color:$white;
-				.icf-bounce-btn{
-					color: $black;
-					background:$white;
-					position:absolute;
-					z-index: -1;
-					top:40%;
-					left:30%;
-					bottom:0;
-					right:0;		
-					width: 110px; height:40px; font-size:18px; font-weight:500; border:none;
-					vertical-align: middle;
-						@media screen and (max-width: $laptops-screen-md) {
-	    	  				left:18%;
-	    	            }	   
-	    	            @media screen and (max-width: $tablet-width) {	    	  				
-	    	  				left:25%;
-	    	            } 	            
-					&:hover, &:focus, &:active {
-						color: white;
-					}
-				}
-			}
-			.dealsDeatails{
+		}		
+
+	}
+}
+
+
+
+
+
+/*---------------*/
+/***** Layla *****/
+/*---------------*/
+
+figure.effect-layla {
+	background: $black;
+}
+
+figure.effect-layla img {
+	height: 100%;
+	-webkit-transform: translate3d(0,0px,0);
+	transform: translate3d(0,0px,0);
+}
+
+
+
+figure.effect-layla .dealsDeatails {
+position:absolute;
+padding:10px;
+bottom:0;	
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-layla button {
+	text-transform: none;
+	opacity: 0;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+	color: #000;
+    background: #fff;
+    position: absolute;
+    z-index: 10000;
+    top: 50%;
+    left: 30%;
+    bottom: 5px;
+    right: 0;
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    vertical-align: middle;
+}
+
+
+figure.effect-layla img,
+figure.effect-layla button {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover img {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,-30px,0);
+	transform: translate3d(0,-30px,0);
+}
+
+
+
+figure.effect-layla:hover button {
+	opacity: 1;
+	-webkit-transform: translate3d(0,-40px,0);
+	transform: translate3d(0,-40px,0);
+}
+
+
+
+li figure {
+	position: relative;
+	overflow: hidden;
+	width: 100%;	
+	cursor: pointer;
+}
+
+li figure img {
+	position: relative;
+	display: block;
+	opacity: 1;
+}
+
+li figure figcaption {
+	color: #fff;
+	text-align:left;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include gradient-vertical(rgba(0,0,0,0), rgba(0,0,0,1), 80%, 100%);
+.dealsDeatails{
 				position:absolute;
 				bottom:0;
-				padding:10px;
+				font-size: 12px;
 				text-align: left;
 				h4{ font-weight:500; margin-bottom:5px;}
 
@@ -106,14 +172,29 @@
 					font-weight:500;
 				}
 			}
-			&:hover{
-				button{z-index:0}
-				img{opacity:0.3}
-			}
-		}
-
-	}
 }
 
+
+
+li figure figcaption,
+li figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+li figure figcaption > a {
+	z-index: 1;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.tabs_item {
+
+	&:first-child {display: block;}
+}
 
 

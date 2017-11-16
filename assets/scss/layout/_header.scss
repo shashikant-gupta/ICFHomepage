@@ -4,12 +4,40 @@
 	border-top: solid 2px $yellow;
 	color: $heading-txt;
 	a{
+		text-decoration: none;
+		border:none;		
 		&.logo{
 			margin:10px 0 5px 0;
+			@media screen and (max-width: $tablet-width) {
+				margin-left:15px;
+				img{
+					width: 60%;
+				}
+			}
+		}
+		&.btn-mobile-call{
+			background:$button-color;
+			color: $Blue;			
+			text-align: center;
+			font-size: 14px;
+			width: 50px;
+		    height: 26px;
+		    font-weight: 500;
+		    text-align: center;
+		    line-height: 26px;
+		    border-radius: 3px;
+		    float: right;
+		    margin: 15px;
 		}
 	}
 
 	nav{
+		@media screen and (max-width: $tablet-width) {
+							    position: absolute;
+							    top: 58px;
+							    z-index: 3;
+							    background: $header-bg;
+						}
 		ul{
 			list-style-type: none;
 			margin-bottom: 0;
@@ -19,6 +47,12 @@
 				float: right;
 				padding: 0 15px;		 
 				line-height: 84px;
+				@media screen and (max-width: $tablet-width) {
+							display: block;
+							line-height: 35px;
+							margin: 2px 0;
+							float: none;
+						}
 				&:hover, &.active{
 				background: $button-color;
 				color: $DealsSteals-bgColor;
@@ -73,4 +107,104 @@
 						}	
 	}
 
+}
+//.navbar-toggle{
+//	.icon-bar{
+//		background:$white;
+//	}
+//} 
+
+/*#nav-toggle { position: absolute;
+			cursor: pointer; 
+			padding: 10px 35px 16px 0px;
+			span{
+				 cursor: pointer;
+				 border-radius: 1px;
+				 height: 5px;
+				 width: 35px;
+				 background: white;
+				 position: absolute;
+				 display: block;
+				 content: '';
+				 transition: all 500ms ease-in-out;
+				 &:before, &:after{
+				 	cursor: pointer;
+					border-radius: 1px;
+					height: 5px;
+					width: 35px;
+					background: white;
+					position: absolute;
+					display: block;
+					content: '';
+					transition: all 500ms ease-in-out;
+				 }
+				 &:before {
+				 	top: -10px; 
+				 }
+				 &:after {
+				 	bottom: -10px;
+				 }
+			}
+			.active{
+				span {
+					background-color: transparent;
+					&:before, &:after{
+						  top: 0;
+					}
+					&:before{
+						transform: rotate(45deg);
+					}
+					&:after{
+						transform: rotate(-45deg);
+					}
+				}
+			}
+} */
+
+@media screen and (max-width: $tablet-width) {
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin-top:15px;}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 29px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+#myNavbar{
+	 height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
 }
