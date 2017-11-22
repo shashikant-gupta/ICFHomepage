@@ -1,43 +1,39 @@
 // =================================
 // Color palette generator
 // =================================
-$yellow:             #fec72f;
-$brightYellow:       #fcee18;
-$black:              #000000;
-$lightBlack:         #393939;
-$darkBlue:           #0c1247;
-$Blue:               #131b6c;
-$lightBlue:          #676b91;
-$skyBlue:            #a7afff;
-$white:              #ffffff;
-$gray:               #adb4b6; 
-
+$yellow: #fec72f;
+$brightYellow: #fcee18;
+$black: #000000;
+$lightBlack: #393939;
+$darkBlue: #0c1247;
+$Blue: #131b6c;
+$lightBlue: #676b91;
+$skyBlue: #a7afff;
+$white: #ffffff;
+$gray: #adb4b6;
 
 
 $border-color: $yellow;
-$button-color:$yellow;
-$button-text:$black;
+$button-color: $yellow;
+$button-text: $black;
 $heading-txt: $white;
 $color-main: $skyBlue;
 $placeholder-color: $gray;
-$WhyBookUs-bgColor:$lightBlack;
-$DealsSteals-bgColor:$Blue;
-$footer-bgcolor:$darkBlue;
+$WhyBookUs-bgColor: $lightBlack;
+$DealsSteals-bgColor: $Blue;
+$footer-bgcolor: $darkBlue;
 $text-hover: $white;
 $header-bg: $Blue;
 
-
-
-
-$alpha : 0.5;
-$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
-$font-size-small:       12px;
+$alpha: 0.5;
+$font-size-base: 14px; //Important To Be 14px For FontAwesome Rendering
+$font-size-small: 12px;
 
 // For Font Weight styles
-$weight-light:          300;
-$weight-normal:         400;
-$weight-semibold:       600;
-$weight-bold:           700;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semibold: 600;
+$weight-bold: 700;
 
 //For RTL, Use It For Floatation
 $left: left;
