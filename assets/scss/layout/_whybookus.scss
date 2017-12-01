@@ -1,7 +1,7 @@
 /*******************
 WhyBookUs Styles
 *********************/
-
+.WhyBookUs-row{ background: $darkBlue;}
 .latesteals-warp { 
 	position:relative;
 	color:$white;
@@ -83,12 +83,9 @@ WhyBookUs Styles
 							display:inline-block;
 							content:'-';
 						}
-						@media only screen and (min-width : $tablet-width) and (max-width : $laptops-screen-md) {
-							line-height: 13px;
-						}		
-						@media screen and (max-width: $tablet-width) {
-							line-height: 20px;
-						}					
+						 @media only screen and  (max-width : $laptops-screen-md) and (min-width : $tablet-width) {
+						 	line-height: 13px;
+					 	 }							
 					}
 				}
 }
