@@ -1,16 +1,18 @@
 // =================================
 // Color palette generator
 // =================================
-$yellow: #fec72f;
-$brightYellow: #fcee18;
-$black: #000000;
-$lightBlack: #393939;
-$darkBlue: #0c1247;
-$Blue: #131b6c;
-$lightBlue: #676b91;
-$skyBlue: #a7afff;
-$white: #ffffff;
-$gray: #adb4b6;
+$yellow:             #fec72f;
+$brightYellow:       #fcee18;
+$black:              #000000;
+$lightBlack:         #393939;
+$darkBlue:           #0c1247;
+$Blue:               #131b6c;
+$lightBlue:          #676b91;
+$skyBlue:            #a7afff;
+$white:              #ffffff;
+$gray:               #adb4b6; 
+$lightgray:          #848b8d;
+$c9caca:             #c9caca;
 
 
 $border-color: $yellow;
@@ -26,15 +28,18 @@ $text-hover: $white;
 $header-bg: $Blue;
 $searchWidget-txt: $white;
 
-$alpha: 0.5;
-$font-size-base: 14px; //Important To Be 14px For FontAwesome Rendering
-$font-size-small: 12px;
+
+
+$alpha : 0.5;
+$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
+$font-size-small:       12px;
 
 // For Font Weight styles
-$weight-light: 300;
-$weight-normal: 400;
-$weight-semibold: 600;
-$weight-bold: 700;
+$weight-light:          300;
+$weight-normal:         400;
+$weight-medium:         500;
+$weight-semibold:       600;
+$weight-bold:           700;
 
 //For RTL, Use It For Floatation
 $left: left;

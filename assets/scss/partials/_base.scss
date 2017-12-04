@@ -21,6 +21,12 @@ Base Styles
 .nopadding{padding: 0 !important;}
 .nomargin{margin: 0 !important;}
 
+//Global class
+.full-page{width: 100%;height: 100%;}
+.mt70{margin-top: 70px !important;;}
+.mt15{margin-top: 15px !important;}
+.mt10{margin-top: 10px !important;}
+//
 .container-bg{
 	background:$DealsSteals-bgColor;	
 	font-family: $Montserrat;

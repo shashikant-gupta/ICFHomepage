@@ -8,31 +8,28 @@
 
 // Media screen and Color
 @import "components/media";
+
+
+// Core components
+@import "components/buttons";
 @import "components/color";
 @import "components/variables";
-
-// Core Components
-@import "components/buttons";
-//@import "components/carousel";
-
-// Partials base styles
 @import "partials/base";
 
-//Why Book Us
-@import "layout/whybookus";
-
-//Deals And Steals
-@import "layout/dealsSteals";
-
-//Icheapflight Info
-@import "layout/icfInfo";
-
-//Icheapflight Footer
+// layout components
+@import "layout/header";
 @import "layout/footer";
 
-//Icheapflight header
-@import "layout/header";
 
-//Icheapflight banner
+@import "layout/widget";
+
+//pagelayout components 
 @import "layout/banner";
+@import "layout/whybookus";
+@import "layout/dealsSteals";
+@import "layout/icfInfo";
+
+
+
+
 
