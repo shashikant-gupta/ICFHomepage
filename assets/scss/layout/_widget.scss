@@ -1,0 +1,112 @@
+ .icf_SearchWidgetWarp {
+   width: 100%;
+   float: left;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 15px;
+   font-family: "Montserrat", sans-serif;
+   h2 {
+     margin: 0px;
+     padding: 0px;
+     color: $white;
+     font-size: 22px;
+     font-weight: $weight-medium;
+     padding-top: 6px;
+     padding-bottom: 5px;
+   }
+   .flight-trip-type {
+     @include fullRow;
+     margin-bottom: 15px;
+     ul {
+       margin: 0px;
+       padding: 0px;
+       list-style: none;
+       li {
+         background: none;
+         color: $yellow;
+         cursor: pointer;
+         font-size: 12px;
+         font-weight: $weight-medium;
+         @include transition;
+         padding-left: 0;
+         padding-right: 10px;
+         // switchstart /
+         .Switch {
+           position: relative;
+           height: 18px;
+           border: 1px solid $yellow;
+           @include border-radius(30px);
+           background: $yellow;
+           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+           cursor: pointer;
+           &.Round {
+             padding: 0px 20px;
+             top: 3px;
+             width: 45px;
+             &.On {
+               .Toggle {
+                 left: 0%;
+               }
+             }
+             &.Off {
+               .Toggle {
+                 left: 56.2%;
+               }
+             }
+           }
+           /*span {
+               display: inline-block;
+               width: 35px;
+               &.On {
+                   color: #33d2da;
+               }
+           }*/
+           .Toggle {
+             position: absolute;
+             top: -1px;
+             background: $white;
+             box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+             @include transition;
+             width: 18px;
+             height: 18px;
+             @include border-radius(50%);
+           }
+         }
+         &.clor-light {
+           color: $lightgray;
+
+         }
+
+       }
+     }
+    }
+   // Search Widget Area
+   .flight-searchGroup{
+     .ember_inputGroup{
+       @extend .positionRel;
+         label{
+           >span{
+             color: $c9caca;
+             font-size: 14px;
+             font-weight: $weight-light;
+           }
+         }
+         .typeahead{
+           width: 85%;
+           border: 0px;
+           height: 43px;
+           padding: 0px;
+           //background: transparent;
+           box-shadow: 0px 0px;
+          // text-transform: uppercase;
+           color: $white;
+           font-size: 26px;
+           font-weight: $weight-medium;
+           &::-webkit-input-placeholder{
+             //color: $white;
+           }
+         }
+     }
+   }
+
+ }
+

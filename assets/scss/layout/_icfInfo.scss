@@ -1,0 +1,39 @@
+/*******************
+Icheapflight info Styles
+*********************/
+.icf-info{ 
+	@include fullRow ; 
+	.subHeading, p{ color:$color-main;}
+	h3{color:$heading-txt}
+	text-align:center;
+}
+
+.social-icon{
+	@include fullRow;
+	font-weight:600;
+	line-height:50px;
+	color:$heading-txt;	
+	font-size:32px;	 
+	 .connect{ display:inline-block; 
+	 	       vertical-align: top;
+	 	       margin-top: 7px;
+	 	       @media screen and (max-width: $tablet-width) {	    	  				
+	    	  				display: block
+	    	            } 
+	 	    }
+	 a {
+			span.fb{ @include icf-spritimg(-73px -73px, 63px, 63px); }
+			span.tw{ @include icf-spritimg(-3px -73px, 63px, 63px); }
+			span.gp{ @include icf-spritimg(-144px -73px, 63px, 63px); }
+			span.pt{ @include icf-spritimg(-4px -152px, 63px, 63px); }
+			span{
+				&:hover{
+					-webkit-filter: grayscale(100%);
+					filter: grayscale(100%);
+					-webkit-transition: .3s ease-in-out;
+					transition: .3s ease-in-out;
+				}
+			}
+		}
+
+}
