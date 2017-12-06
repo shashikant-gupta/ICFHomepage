@@ -1,7 +1,7 @@
  .icf_SearchWidgetWarp {
    width: 100%;
    float: left;
-   background: rgba(0, 0, 0, 0.5);
+   background: rgba(0, 0, 0, 0.7);
    padding: 15px;
    font-family: "Montserrat", sans-serif;
    h2 {
@@ -80,33 +80,140 @@
      }
     }
    // Search Widget Area
-   .flight-searchGroup{
+   .flight-searchGroup, .trip-date_searchGroup, .travelers-selector{
+     position: relative;
      .ember_inputGroup{
        @extend .positionRel;
+       border-bottom: 1px solid $white;
+       padding-bottom: 4px;
+       width: 90%;
          label{
+           margin-bottom: 2px;
            >span{
              color: $c9caca;
              font-size: 14px;
              font-weight: $weight-light;
+             padding: 0;
            }
          }
          .typeahead{
-           width: 85%;
+           width: 100%;
            border: 0px;
-           height: 43px;
+           height: 37px;
            padding: 0px;
-           //background: transparent;
+           padding-right: 30px;
+           background: transparent;
            box-shadow: 0px 0px;
-          // text-transform: uppercase;
+           text-transform: uppercase;
            color: $white;
-           font-size: 26px;
-           font-weight: $weight-medium;
-           &::-webkit-input-placeholder{
-             //color: $white;
+           font-size: 24px;
+           font-weight: $weight-semibold;
+           &.form-control{
+             @include border-radius (0);
+             &[placeholder]{
+               color: $white;
+             }
+             &::-webkit-input-placeholder{
+               color : $white;
+               text-transform: none !important;
+             }
+             &::-moz-placeholder{
+               color : $white;
+               text-transform: none !important;
+             }
+             &:-ms-input-placeholder{
+               color : $white;
+               text-transform: none !important;
+             }
+           }
+           &.sub_location{
+             text-transform: inherit;
+             font-size: 14px;
+             font-weight: $weight-light;
+             height: auto;
            }
          }
+       .clear-input{
+         color: #fff;
+         @include border-radius(50%);
+         cursor: pointer;
+         position: absolute;
+         top: 30px;
+         right: 5px;
+         font-weight: 600;
+         width: 20px;
+         height: 20px;
+         text-align: center;
+         @include transparent ($white, 0.5)
+       }
+     }
+   }
+   //depart and Retrun Date area
+   .trip-date_searchGroup{
+      margin-top: 20px;
+     .calendarField{
+       font-size: 14px;
+       font-weight: $weight-light;
+       color: $white;
      }
    }
 
+   //travelers and Coach Area
+   .travelers-selector{
+     margin-top: 20px;
+     .pasngr-field{
+       position: relative;
+       .typeahead {
+         padding-left: 30px;
+         letter-spacing: 2px;
+         cursor: default;
+        }
+     }
+     .coach-selector{
+       .typeahead {
+         padding-left: 30px;
+         cursor: default;
+       }
+
+     }
+   }
+
+ }
+ .ember_wsepartor{
+   position: absolute;
+   width: 45px;
+   height: 45px;
+   top:50%;
+   left: 50%;
+   margin-left: -22px;
+   margin-top: -22px;
+   z-index: 50;
+   &[role=switch-city]{cursor:pointer}
+ }
+ // widget Sprite Group
+ .widget_sprite{
+   width:45px;
+   height: 45px;
+   background-image: url('../images/icons/widget_sprite.png');
+   background-repeat: no-repeat;
+   display: inline-block;
+   &.flight-swipe-icon{
+     background-position: 0 0;
+   }
+   &.separtor-icon{
+     background-position: 0 -135px;
+   }
+   &.ptravelers-icon{
+     background-position: -6px -46px;
+     position: absolute;
+     top: 18px; left: -4px;
+     width: 28px;
+   }
+   &.classCoach-icon{
+     background-position: -6px -88px;
+     position: absolute;
+     top: 18px; left: -4px;
+     width: 28px;
+   }
  }
 

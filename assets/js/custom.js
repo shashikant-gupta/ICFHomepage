@@ -24,6 +24,18 @@ function widgetParallax() {
     });
 }
 
+
+$("#switch_city").on('click', function () {
+    if ($('#Origin').val() != "" && $('#Destination').val() != "") {
+        var iconplane = $('#Origin').val();
+        $('#Origin').val($('#Destination').val());
+        $('#Destination').val(iconplane);
+        var iconplane = $('#subLocOrigin').val();
+        $('#subLocOrigin').val($('#subLocDestination').val());
+        $('#subLocDestination').val(iconplane);
+    }
+});
+
 //////////////////////////////////////////////RoundTrip And OneWay///////////////////////////////////////////////////////////////////////////////////
 function HasRoundtrip() {
     if ($("#RoundMultiOnewayTrip").val() == "ONEWAY") {

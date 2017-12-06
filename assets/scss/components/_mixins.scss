@@ -54,7 +54,7 @@
 @mixin transparent($color, $alpha) {
 	$rgba: rgba($color, $alpha);
 	$ie-hex-str: ie-hex-str($rgba);
-	background-color: transparent;
+	//background-color: transparent;
 	background-color: $rgba;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
 	zoom: 1;
@@ -124,10 +124,6 @@
 @mixin text-uppercase{
 	text-transform: uppercase;
 }
-
-
-
-
 @mixin placeholder($placeholder, $fontSize) {
 	&::-webkit-input-placeholder { color: $placeholder; font-size:$fontSize; }
 	&::-moz-placeholder { color: $placeholder; font-size:$fontSize; }
