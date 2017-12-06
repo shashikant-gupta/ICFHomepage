@@ -1,3 +1,4 @@
+*{margin: 0; padding: 0; position: relative;}
 /*******************
 Base Styles
 *********************/
@@ -27,6 +28,9 @@ Base Styles
 .mt15{margin-top: 15px !important;}
 .mt10{margin-top: 10px !important;}
 //
+.spritIcon{
+	@include spritImg;
+}
 .container-bg{
 	background:$DealsSteals-bgColor;	
 	font-family: $Montserrat;

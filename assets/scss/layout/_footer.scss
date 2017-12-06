@@ -57,7 +57,7 @@
 
 .partners-row{
 	font-size:$font-size-small;
-	.payment-icon{ @include icf-spritimg(9px -323px, 395px, 43px);	}
+	.payment-icon{ @include spritPosition(9px, -323px, 395px, 43px);	}
 	img{margin-top:15px;}
 } 
 

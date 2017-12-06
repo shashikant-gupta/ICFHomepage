@@ -41,7 +41,7 @@
            &.Round {
              padding: 0px 20px;
              top: 3px;
-             width: 45px;
+             width: 45px;             
              &.On {
                .Toggle {
                  left: 0%;
@@ -49,7 +49,9 @@
              }
              &.Off {
                .Toggle {
-                 left: 56.2%;
+                 /*left: 56.2%;*/                 
+                 left: calc(100% - 1px);
+                 transform: translateX(-100%);
                }
              }
            }
@@ -68,9 +70,12 @@
              @include transition;
              width: 18px;
              height: 18px;
-             @include border-radius(50%);
+             @include border-radius(50%);             
            }
          }
+         .Round:active .Toggle {
+          width: 30px;                         
+      }
          &.clor-light {
            color: $lightgray;
 

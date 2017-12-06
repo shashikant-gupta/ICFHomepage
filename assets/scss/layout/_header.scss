@@ -1,7 +1,11 @@
 @import 'navigation';
 #header{
 	background: $header-bg;
-	border-top: solid 2px $yellow;
+	border-top: solid 2px $yellow;	
+	position: fixed;
+	width: 100%;
+	top: 0;left: 0;
+	z-index: 99;
 	color: $heading-txt;
 	a{
 		text-decoration: none;
@@ -32,34 +36,36 @@
 	}
 
 	nav{
+		padding: 30px 0;
 		@media screen and (max-width: $tablet-width) {
 							    position: absolute;
 							    top: 58px;
-							    z-index: 3;
+							    z-index: 10;
 							    background: $header-bg;
 						}
-		ul{
-			list-style-type: none;
-			margin-bottom: 0;
-			padding-left: 0;
-			li{
-				display: inline-block;
-				float: right;
-				padding: 0 15px;		 
-				line-height: 84px;
-				@media screen and (max-width: $tablet-width) {
-							display: block;
-							line-height: 35px;
-							margin: 2px 0;
-							float: none;
-						}
-				&:hover, &.active{
+		
+		a{
+			transition: 0.4s;
+			text-decoration: none;
+			color: $white;
+			padding: 0 10px;
+			margin: 0 10px;
+			@media screen and (max-width: $tablet-width) {
+				display: block;
+				line-height: 35px;
+				margin: 2px 0;
+				float: none;				
+			}
+			&:hover, &.active{
+				padding: 36px 10px;
 				background: $button-color;
 				color: $DealsSteals-bgColor;
-				
+				@media screen and (max-width: $tablet-width) {
+					padding: 5px 10px;	
+				}							
 			}
-			}			
 		}
+
 	}
 }
 .call-support{	
@@ -82,14 +88,13 @@
 							font-size: 9px;
 						}
 		 .cust-support{	
-		 	@include icf-spritimg(-148px -8px, 20px, 16px);
+			 @include spritPosition(-148px , -8px, 20px, 16px);
 		 }
-		 .Reservations{
-		 	@include icf-spritimg(-114px -7px, 20px, 16px);		 	
+		 .Reservations{		
+			 @include spritPosition(-114px, -7px, 20px, 16px);	
 		 }
 
-	}
-	
+	}	
 
 	}
 	.toll-free{
@@ -99,7 +104,8 @@
 		color: $heading-txt;
 		cursor: default;
 		span{
-			@include icf-spritimg(-69px 0px, 38px, 30px);
+			@include spritPosition(-69px, 0px, 38px, 30px);
+			
 			margin-bottom: -4px;
 		}
 		@media screen and (max-width: $desktop-screen-lg) {
@@ -108,58 +114,6 @@
 	}
 
 }
-//.navbar-toggle{
-//	.icon-bar{
-//		background:$white;
-//	}
-//} 
-
-/*#nav-toggle { position: absolute;
-			cursor: pointer; 
-			padding: 10px 35px 16px 0px;
-			span{
-				 cursor: pointer;
-				 border-radius: 1px;
-				 height: 5px;
-				 width: 35px;
-				 background: white;
-				 position: absolute;
-				 display: block;
-				 content: '';
-				 transition: all 500ms ease-in-out;
-				 &:before, &:after{
-				 	cursor: pointer;
-					border-radius: 1px;
-					height: 5px;
-					width: 35px;
-					background: white;
-					position: absolute;
-					display: block;
-					content: '';
-					transition: all 500ms ease-in-out;
-				 }
-				 &:before {
-				 	top: -10px; 
-				 }
-				 &:after {
-				 	bottom: -10px;
-				 }
-			}
-			.active{
-				span {
-					background-color: transparent;
-					&:before, &:after{
-						  top: 0;
-					}
-					&:before{
-						transform: rotate(45deg);
-					}
-					&:after{
-						transform: rotate(-45deg);
-					}
-				}
-			}
-} */
 
 @media screen and (max-width: $tablet-width) {
 #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin-top:15px;}
@@ -207,4 +161,10 @@
     overflow-x: hidden;
     transition: 0.5s;
 }
+}
+.fixed{
+	
+	width: 100%;
+	top: 0;
+	left: 0;width: 100%;
 }

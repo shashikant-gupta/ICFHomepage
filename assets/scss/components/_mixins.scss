@@ -111,7 +111,6 @@
 
 // Full-row
 @mixin fullRow{
-	 float: #{$left};
 	 min-width: 100%;
 }
 @mixin absoluteCenter {
@@ -131,14 +130,17 @@
 	&:-moz-placeholder { color: $placeholder; font-size:$fontSize;}
 }
 
-@mixin icf-spritimg($position, $width, $height) {
-	width: $width;
-	height:$height;   	
+@mixin spritImg{
 	background:{
-		image: url($theme-iconsPath+$sprite-iconPath);
-		position: $position;
-        repeat: no-repeat;
+			image: url($theme-iconsPath+$sprite-iconPath);
+      repeat: no-repeat;
 	} 
+}
+@mixin spritPosition($position-x,$position-y, $width, $height) {
+	width: $width;
+	height:$height;   
+	background-position-x:$position-x;
+	background-position-y:$position-y;		
 	display: inline-block;
 }
 

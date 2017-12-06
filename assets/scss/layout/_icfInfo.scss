@@ -22,10 +22,10 @@ Icheapflight info Styles
 	    	            } 
 	 	    }
 	 a {
-			span.fb{ @include icf-spritimg(-73px -73px, 63px, 63px); }
-			span.tw{ @include icf-spritimg(-3px -73px, 63px, 63px); }
-			span.gp{ @include icf-spritimg(-144px -73px, 63px, 63px); }
-			span.pt{ @include icf-spritimg(-4px -152px, 63px, 63px); }
+			span.fb{ @include spritPosition(-73px, -73px, 63px, 63px); }
+			span.tw{ @include spritPosition(-3px, -73px, 63px, 63px); }
+			span.gp{ @include spritPosition(-144px, -73px, 63px, 63px); }
+			span.pt{ @include spritPosition(-4px, -152px, 63px, 63px); }
 			span{
 				&:hover{
 					-webkit-filter: grayscale(100%);

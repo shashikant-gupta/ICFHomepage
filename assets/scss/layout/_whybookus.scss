@@ -60,7 +60,7 @@ WhyBookUs Styles
 		display: inline-block;
 		
 	&.icf-spritimg{
-        @include icf-spritimg(-131px -135px, 85px, 85px);    
+        @include spritPosition(-131px, -135px, 85px, 85px);    
         @media screen and (max-width: $desktop-screen-lg) {
     	  	display: none;
     	  }	    	  
