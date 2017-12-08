@@ -2,16 +2,17 @@
 #header{
 	background: $header-bg;
 	border-top: solid 2px $yellow;	
-	position: fixed;
-	width: 100%;
-	top: 0;left: 0;
-	z-index: 99;
 	color: $heading-txt;
+	box-shadow: 0px 2px 2px rgba(0,0,0, 0.5);	
+	transform: translateZ(0);
+    transition:all 0.5s;	
 	a{
 		text-decoration: none;
-		border:none;		
+		border:none;
+		position: relative;				
 		&.logo{
 			margin:10px 0 5px 0;
+			img{transition: all .2s ease-in-out;}							
 			@media screen and (max-width: $tablet-width) {
 				margin-left:15px;
 				img{
@@ -48,21 +49,48 @@
 			transition: 0.4s;
 			text-decoration: none;
 			color: $white;
-			padding: 0 10px;
-			margin: 0 10px;
-			@media screen and (max-width: $tablet-width) {
+			padding: 36px 10px;
+			margin: 0 10px;			
+			@include phone {
 				display: block;
 				line-height: 35px;
 				margin: 2px 0;
 				float: none;				
 			}
-			&:hover, &.active{
+			span{
+				position: inherit;
+				z-index: 1;
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: 100%;
+				position: absolute;
+				z-index: 0;
+				left: 0;
+				top: -150%;
+				height: 100px;
+				background: $button-color;
+				transition: all 0.5s;
+			}
+			&:hover::after{
+				display: block;
+				left: 0;
+				height: 88px;
+				top: 0;
+				background: $button-color;
+			}
+			/*&:hover, &.active{
 				padding: 36px 10px;
 				background: $button-color;
 				color: $DealsSteals-bgColor;
 				@media screen and (max-width: $tablet-width) {
 					padding: 5px 10px;	
 				}							
+			}*/
+			&:hover span, &.active span{
+				color:$DealsSteals-bgColor;
+				transition: all 1s;
 			}
 		}
 
@@ -84,8 +112,9 @@
 		color: $heading-txt;
 		cursor: pointer;
 		text-decoration: none;
-		@media screen and (max-width: $desktop-screen-lg) {
-							font-size: 9px;
+		font-size: 9px;
+		@include desktop {
+							font-size: 12px;
 						}
 		 .cust-support{	
 			 @include spritPosition(-148px , -8px, 20px, 16px);
@@ -115,7 +144,7 @@
 
 }
 
-@media screen and (max-width: $tablet-width) {
+@include phone{
 #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin-top:15px;}
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
@@ -162,9 +191,43 @@
     transition: 0.5s;
 }
 }
-.fixed{
-	
+.smallHeader{	
+	position:fixed;
+	top:0;
+	left:0;
 	width: 100%;
-	top: 0;
-	left: 0;width: 100%;
+	z-index:10;	
+	animation:slide-down 0.7s;opacity:0.9;
+		a{		
+		&.logo{			
+			img{width: 80px;}			
+			}				
+		}
+	.support{
+		display: none;			
+	}	
+	nav{
+		padding: 21px 0 !important;	
+		a{
+			&::after{height: 75px !important;}
+			&:hover span, &.active span{
+				color:$DealsSteals-bgColor;
+				transition: color 1s;
+			}
+		}
+	}
+	.call-support{
+		.toll-free{font-size: 28px;}
+	}
+	
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
 }

@@ -3,9 +3,10 @@ $(document).ready(function() {
     (function ($) { 
         
         $('ul.dealTabs li ').click(function (g) {
-            $('html').animate({
-                        scrollTop: $(".dealTabs").offset().top
+           $('html').animate({
+                       scrollTop: $(".dealTabs").offset().top -100
                }, 1500);
+         
             var tab = $(this).closest('.tab'), 
                 index = $(this).closest('li').index();                
             
@@ -29,10 +30,14 @@ $(document).ready(function() {
 });
 
 ////////////////////////////////////////////// Header scroll ///////////////////////////////////////////////////////////////////////////////////
-$(window).scroll(function(){
-    var sticky=$("#header");
-    scroll=$(window).scrollTop();
-    
-    if(scroll>=100) sticky.addClass("fixed");
-    else sticky.removeClass("fixed");
-    });
+    $(document).on("scroll", function() {
+        if ($(document).scrollTop() > 600) {
+          $("#header").addClass("smallHeader");
+        } else {
+          $("#header").removeClass("smallHeader");
+        }
+      });
+
+
+
+      

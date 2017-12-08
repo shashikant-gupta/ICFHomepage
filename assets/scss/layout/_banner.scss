@@ -1,6 +1,5 @@
 @import 'widget';
 #widget-banner{
-	margin-top:85px; 
   @include fullRow;
   @extend .positionRel;
   overflow: hidden;
