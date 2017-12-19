@@ -1,14 +1,11 @@
 // Partials dependencies
 @import "partials/typography";
 
-
-
 // Modules, Variables, Functions and mixins
 @import "components/mixins";
 
 // Media screen and Color
 @import "components/media";
-
 
 // Core components
 @import "components/buttons";
@@ -20,11 +17,10 @@
 @import "layout/header";
 @import "layout/footer";
 
-
+@import "layout/banner";
 @import "layout/widget";
 
 //pagelayout components 
-@import "layout/banner";
 @import "layout/whybookus";
 @import "layout/dealsSteals";
 @import "layout/icfInfo";

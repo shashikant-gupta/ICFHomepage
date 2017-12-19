@@ -111,6 +111,7 @@
 
 // Full-row
 @mixin fullRow{
+	 float: #{$left};
 	 min-width: 100%;
 }
 @mixin absoluteCenter {

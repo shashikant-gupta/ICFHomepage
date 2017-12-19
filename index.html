@@ -62,7 +62,7 @@
       </div>      
     </header><!-- /header -->
 
-    <section id="widget-banner">
+     <section id="widget-banner">
       <div class="bg-holder full-page">
         <div class="bg-mask"></div>
         <div class="bg-widget-banner"></div>
@@ -139,6 +139,7 @@
                                   <label for="adulttravelers"><span class="label">Passengers</span></label>
                                   <input type="text" class="typeahead form-control"  value="01" readonly="readonly" id="adulttravelers" />
                                   <span class="widget_sprite ptravelers-icon"></span>
+                                  <span class="widget_sprite sortdesc-icon"></span>
                               </div>
                           </div>
                           <div class="ember_wsepartor">
@@ -147,11 +148,73 @@
                           <div class="col-sm-6 col-xs-6">
                               <div class="ember_inputGroup pull-right coach-selector">
                                   <label for="FlightClass"><span class="label">Class</span></label>
-                                  <input type="text" class="typeahead form-control"  value="" placeholder="Economy" readonly="readonly" id="FlightClass" />
+                                  <input type="text" class="typeahead form-control"  value="Economy" readonly="readonly" id="flightClass" />
                                   <span class="widget_sprite classCoach-icon"></span>
+                                  <span class="widget_sprite sortdesc-icon"></span>
+                              </div>
+                          </div>
+                          <!-- Travel Info-->
+                          <div class="trvl-dropdown" id="flight_passengerBox">
+                              <div id="psngrClose-btn" class="be-close-panel">
+                                  <i class="fa fa-times" aria-hidden="true"></i>
+                              </div>
+                              <div class="be-pasngrCount" id="dvSearchUser">
+                                  <div class="row">
+                                     <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                                         <label>ADULTS <span>(+12 yrs)</span></label>
+                                         <div class="plus-misWarp">
+                                             <input id="btnAdultDecrease" type="button" value="–" class="qtyminus" field="quantity"/>
+                                             <input id="AdultCount" type='text' name='quantity' value='1' class='qty adultIndex form-control' />
+                                             <input id="btnAdultIncrease" type='button' value='+' class='qtyplus' field='quantity'/>
+                                         </div>
+                                     </div>
+                                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                                          <label>CHILD <span>(0-11 yrs)</span></label>
+                                          <div class="plus-misWarp">
+                                              <input id="btnchildDecrease" type="button" value="–" class="qtyminus" field="quantity1"/>
+                                              <input id="TotalChildCount" type='text' name='quantity1' value='0' class='qty childIndex form-control' />
+                                              <input id="btnchildIncrease" type='button' value='+' class='qtyplus' field='quantity1'/>
+                                          </div>
+                                      </div>
+                                   </div>
+                                  <div class="clearfix"></div>
+                                  <div class="row">
+                                      <div class="col-md-12 mt10">
+                                           <label>Select Chil Ages</label>
+                                           <div id="Addchild" class="row mt10">
+
+                                          </div>
+                                      </div>
+                                      <div class="col-md-12 ">
+                                          <div class="text-center small-ctn">
+                                              <button class="btn">DONE</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--//FlightClass type Info-->
+                          <div class="trvl-dropdown _coachClass pull-right" id="flightClassBox">
+                              <div class="flight-class-type">
+                                  <ul>
+                                      <li>
+                                          <input type="radio" name="classradios-btn" id="economyClass" value="Economy" class="radiobox" checked="checked" />
+                                          <label for="economyClass" class="coach-label flightClass">Economy</label>
+                                      </li>
+                                      <li>
+                                          <input type="radio" name="classradios-btn" id="radio2" value="Business" class="radiobox" />
+                                          <label for="radio2" class="coach-label flightClass">Business</label>
+                                      </li>
+                                      <li>
+                                          <input type="radio" name="classradios-btn" id="radio3" value="First Class" class="radiobox" />
+                                          <label for="radio3" class="coach-label flightClass">First Class</label>
+                                      </li>
+                                  </ul>
                               </div>
                           </div>
                       </div>
+                      
+
                       
                       <!-- SearchBtn-->
                       <div class="text-center fullWidth widgets-button marg-top30">
@@ -163,7 +226,17 @@
                 </div>
                 <!-- //Search Widget -->
               </div>
-              <div class="col-md-6"></div>
+                <!-- search info-title-->
+              <div class="col-md-6 banner-info-container">
+                  <div class="_banenrContent">
+                      <h2>BOOK NOW & SAVE!</h2>
+                      <div class="caption-label">
+                          <p><span></span>We Specialize in finding the<br/>
+                              Best Flight Deals Anywhere. Guaranteed.</p>
+                      </div>
+                  </div>
+              </div><!--//search info-title-->
+
             </div>
           </div>
         </div>
@@ -171,7 +244,7 @@
     </section>
     
     <div class="clearfix"></div>
-    <section class="WhyBookUs-row container-fluid">
+    <section class="WhyBookUs-row container-fluid"> 
     <div class="container ">
       <div class="row marg-top-btm30">
 

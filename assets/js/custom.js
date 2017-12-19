@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    widgetParallax()
-    HasRoundtrip()
+    widgetParallax();
+    HasRoundtrip();
+    flightClass();
 });
 
 //
@@ -22,6 +23,24 @@ function widgetParallax() {
             });
         }
     });
+}
+
+//
+$('#flightClass').click(function(e){
+    e.preventDefault();
+    $('#flightClassBox').show();
+});
+function flightClass() {
+    var coachfieldId = $("#flightClass");
+    var radBtn = $('#flightClassBox input[name=classradios-btn]');
+    var seledValue = $('#flightClassBox input[name=classradios-btn]:checked').val();
+
+    $(coachfieldId).val(seledValue);
+    $(radBtn).on('change', function () {
+        $(coachfieldId).val( $(this).val() );
+        $('#flightClassBox').hide();
+    });
+
 }
 
 
