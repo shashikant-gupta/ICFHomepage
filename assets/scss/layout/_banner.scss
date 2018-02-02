@@ -11,7 +11,7 @@
         height: 100%;
         z-index: 5;
         opacity: 0.4;
-        background: #000;
+        background: $black;
         -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
         filter:alpha(opacity=50);
         display: block;
@@ -50,7 +50,7 @@
     width: 100%;
     h2{
       font-size: 50px;
-      color: $fcee18;
+      color: $brightYellow;
       font-weight: $weight-semibold;
       @include text-shadow;
       text-align: center;

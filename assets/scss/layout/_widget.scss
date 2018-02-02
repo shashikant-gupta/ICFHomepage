@@ -1,7 +1,7 @@
  .icf_SearchWidgetWarp {
    width: 100%;
    float: $left;
-   background: rgba(0, 0, 0, 0.7);
+   background: rgba($black, 0.7);
    padding: 15px;
    font-family: "Montserrat", sans-serif;
    h2 {
@@ -36,7 +36,7 @@
            border: 1px solid $yellow;
            @include border-radius(30px);
            background: $yellow;
-           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+           box-shadow: 0px 0px 4px rgba($black, 0.1), inset 0px 1px 3px 0px rgba($black, 0.1);
            cursor: pointer;
            &.Round {
              padding: 0px 20px;
@@ -66,7 +66,7 @@
              position: absolute;
              top: -1px;
              background: $white;
-             box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+             box-shadow: inset 0px 1px 0px 0px rgba($searchWidget-txt, 0.5);
              @include transition;
              width: 18px;
              height: 18px;
@@ -95,7 +95,7 @@
          label{
            margin-bottom: 2px;
            >span{
-             color: $c9caca;
+             color: $searchWidget-border;
              font-size: 14px;
              font-weight: $weight-light;
              padding: 0;
@@ -187,8 +187,8 @@
      display: none;
      @include border-radius (3px);
      background: $white;
-     border: 1px solid $d1d1d1;
-     @include box-shadow(0 0 2px 0 rgba(0,0,0,0.2));
+     border: 1px solid $searchWidget-border;
+     @include box-shadow(0 0 2px 0 rgba($button-text,0.2));
      position: absolute;
      text-align: left;
      top: 71px;
@@ -228,7 +228,7 @@
          color: $lightBlack;
          font-size: 14px;
          span{
-           color: $gray;
+           color: $lightgray;
            font-size: 11px;
            font-weight: $weight-light;
          }
@@ -236,13 +236,13 @@
        }
        .plus-misWarp{
          background-color: $white;
-         border: 1px solid #dcdada;
+         border: 1px solid $searchWidget-border;
          @include border-radius(4px);
          margin-top: 7px;
          padding: 3px 0;
          width: 100%;
          float: $left;
-         @include box-shadow(-3px -3px 0px 0px rgba(220, 218, 218, 0.75));
+         @include box-shadow(-3px -3px 0px 0px rgba($searchWidget-border, 0.75));
          .qtyminus,.qtyplus,.qty{
            background: transparent;
            width: 30px;
@@ -285,8 +285,8 @@
                  clip: rect(0 0 0 0);
                  height:1px; width:1px; margin:-1px; padding:0; border:0;
                  &:checked + label.flightClass{
-                   background-position: 0 -25px;
-                   color: $lightBlack;
+                 background-position: 0 -25px;
+                 color: $lightBlack;
                  }
                }
                + label.flightClass{
@@ -296,7 +296,7 @@
                  line-height:25px;
                  background-repeat:no-repeat;
                  background-position: 0 0;
-                 color: $lightgray;
+                 color: $gray;
                  font-size: 14px;
                  font-weight: $weight-normal;
                  vertical-align:middle;
@@ -319,7 +319,7 @@
  .widgets-button, .small-ctn{
     button{
       &.btn{
-        @include gradient-vertical (#fccb45, #d0a120, 0%, 100%);
+        @include gradient-vertical ($brightYellow, $yellow, 0%, 100%);
         @extend .fullWidth;
         padding-top: 8px;
         padding-bottom: 8px;
@@ -333,7 +333,7 @@
         }
         &:active {
           color: $black;
-          @include gradient-vertical (#d0a120, #fccb45, 0%, 100%);
+          @include gradient-vertical ($yellow, $brightYellow, 0%, 100%);
         }
         &:focus {
           outline: none !important;

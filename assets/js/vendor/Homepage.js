@@ -30,7 +30,8 @@ $(document).ready(function() {
 });
 
 ////////////////////////////////////////////// Header scroll ///////////////////////////////////////////////////////////////////////////////////
-    $(document).on("scroll", function() {
+    
+$(document).on("scroll", function() {
         if ($(document).scrollTop() > 600) {
           $("#header").addClass("smallHeader");
         } else {
