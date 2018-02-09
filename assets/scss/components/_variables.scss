@@ -33,8 +33,13 @@ $searchWidget-border: $d1d1d1;
 
 
 $alpha : 0.5;
-$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
+$font-size-mobile :     9px; 
 $font-size-small:       12px;
+$font-size-base:        14px;
+$font-size-regular:     16px;
+$font-size-large:       24px;
+$font-size-x-large:	    32px;
+$font-size-xx-large:    48px;
 
 // For Font Weight styles
 $weight-light:          300;

@@ -1,236 +1,87 @@
 @import 'navigation';
 #header{
 	background: $header-bg;
-	border-top: solid 2px $yellow;	
-	color: $heading-txt;
+	border-top: solid 2px $yellow;		
 	box-shadow: 0px 2px 2px rgba($black, 0.5);	
+	font-family: $Montserrat;
+	position: relative;
 	transform: translateZ(0);
-    transition:all 0.5s;	
-	a{
-		text-decoration: none;
-		border:none;
-		position: relative;				
-		&.logo{
-			margin:10px 0 5px 0;
-			img{transition: all .2s ease-in-out;}							
-			@media screen and (max-width: $tablet-width) {
-				margin-left:15px;
-				img{
-					width: 60%;
-				}
-			}
-		}
-		&.btn-mobile-call{
-			background:$button-color;
-			color: $Blue;			
-			text-align: center;
-			font-size: 14px;
-			width: 50px;
-		    height: 26px;
-		    font-weight: 500;
-		    text-align: center;
-		    line-height: 26px;
-		    border-radius: 3px;
-		    float: right;
-		    margin: 15px;
-		}
-	}
+	transition:all 0.5s;	
+    z-index: 55;
 
-	nav{
-		padding: 30px 0;
-		@media screen and (max-width: $tablet-width) {
-							    position: absolute;
-							    top: 58px;
-							    z-index: 10;
-							    background: $header-bg;
-						}
-		
+	.logo{
+		margin:10px 0 5px 0; 
+		width: 150px;
+		@include tablet{
+			width: 110px;
+		}
+		@include phone {
+				width: 70px;
+		}
+
 		a{
-			transition: 0.4s;
-			text-decoration: none;
-			color: $white;
-			padding: 36px 10px;
-			margin: 0 10px;			
-			@include phone {
-				display: block;
-				line-height: 35px;
-				margin: 2px 0;
-				float: none;				
-			}
-			span{
-				position: inherit;
-				z-index: 1;
-			}
-			&::after{
-				content: "";
-				display: block;
-				width: 100%;
-				position: absolute;
-				z-index: 0;
-				left: 0;
-				top: -150%;
-				height: 100px;
-				background: $button-color;
-				transition: all 0.5s;
-			}
-			&:hover::after{
-				display: block;
-				left: 0;
-				height: 88px;
-				top: 0;
-				background: $button-color;
-			}
-			/*&:hover, &.active{
-				padding: 36px 10px;
-				background: $button-color;
-				color: $DealsSteals-bgColor;
-				@media screen and (max-width: $tablet-width) {
-					padding: 5px 10px;	
-				}							
-			}*/
-			&:hover span, &.active span{
-				color:$DealsSteals-bgColor;
-				transition: all 1s;
-			}
+			img{
+				max-width: 100%;
+				transition: all .2s ease-in-out;
+			}			
 		}
-
 	}
+
 }
+
+.btn-mobile-call{
+	background:$button-color;
+	color: $Blue;			
+	text-align: center;
+	font-size: $font-size-base;
+	width: 50px;
+	height: 26px;
+	font-weight: 500;
+	line-height: 26px;
+	border-radius: 3px;
+	margin: 15px;
+}
+
 .call-support{	
 	margin:10px 0;
+
 	.support{
 		margin-bottom: 2px;
 		span{
 			display: inline-block;
 			margin-bottom: -2px;
 		}
-		a{
+	}
+
+	a{
 		display: inline-block;
-		color: $heading-txt;
-		font-size: $font-size-small;
+		font-size: $font-size-mobile;
 		padding-left:5px;
-		color: $heading-txt;
-		cursor: pointer;
-		text-decoration: none;
-		font-size: 9px;
+		
 		@include desktop {
-							font-size: 12px;
+							font-size: $font-size-small;
 						}
-		 .cust-support{	
-			 @include spritPosition(-148px , -8px, 20px, 16px);
-		 }
-		 .Reservations{		
-			 @include spritPosition(-114px, -7px, 20px, 16px);	
-		 }
 
-	}	
-
-	}
-	.toll-free{
-		text-decoration: none;
-		font-size: 30px;		
-		font-weight: $weight-semibold;
-		color: $heading-txt;
-		cursor: default;
-		span{
-			@include spritPosition(-69px, 0px, 38px, 30px);
-			
-			margin-bottom: -4px;
+		.cust-support{	
+			@include spritPosition(-148px , -8px, 20px, 16px);
 		}
-		@media screen and (max-width: $desktop-screen-lg) {
-							font-size: 22px;
-						}	
-	}
-
-}
-
-@include phone{
-#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin-top:15px;}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 2px;
-  width: 29px;
-  background: $white;
-  position: absolute;
-  display: block;
-  content: '';
-}
-#nav-toggle span:before {
-  top: -10px; 
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 500ms ease-in-out;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
-
-#myNavbar{
-	 height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: $black;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-}
-.smallHeader{	
-	position:fixed;
-	top:0;
-	left:0;
-	width: 100%;
-	z-index:10;	
-	animation:slide-down 0.7s;opacity:0.9;
-		a{		
-		&.logo{			
-			img{width: 80px;}			
-			}				
+		.Reservations{		
+			@include spritPosition(-114px, -7px, 20px, 16px);	
 		}
-	.support{
-		display: none;			
-	}	
-	nav{
-		padding: 21px 0 !important;	
-		a{
-			&::after{height: 75px !important;}
-			&:hover span, &.active span{
-				color:$DealsSteals-bgColor;
-				transition: color 1s;
+
+		&.toll-free{
+			font-size: $font-size-large; 		
+			font-weight: $weight-semibold;
+
+			@include desktop {
+				font-size: $font-size-x-large;	
+			}
+			 
+			span{
+				@include spritPosition(-69px, 0px, 38px, 30px);				
+				margin-bottom: -4px;
 			}
 		}
 	}
-	.call-support{
-		.toll-free{font-size: 28px;}
-	}
-	
-}
-.smallHeader +  #widget-banner{
-	padding-top: 200px;
-}
-@keyframes slide-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    } 
-    100% {
-        opacity: 0.9;
-        transform: translateY(0);
-    } 
+
 }

@@ -19,7 +19,6 @@ function widgetParallax() {
                 var yPos = -($(window).scrollTop() / animSpeed);
                 var bgpos = '50% ' + yPos + 'px';
                 $obj.css('background-position', bgpos);
-
             });
         }
     });

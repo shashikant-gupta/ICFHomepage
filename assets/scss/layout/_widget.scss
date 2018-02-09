@@ -4,6 +4,10 @@
    background: rgba($black, 0.7);
    padding: 15px;
    font-family: "Montserrat", sans-serif;
+   @include phone{
+     margin-top: 0px !important;
+     background: rgba($black, 0);
+   }
    h2 {
      margin: 0px;
      padding: 0px;
@@ -12,6 +16,9 @@
      font-weight: $weight-medium;
      padding-top: 6px;
      padding-bottom: 5px;
+     @include phone{
+       display: none;
+     }
    }
    .flight-trip-type {
      @include fullRow;

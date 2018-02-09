@@ -35,14 +35,25 @@ Base Styles
 	font-family: $Montserrat;
 	h1 {
 	    margin-top: 30px;
-	    text-align: center;
 	    color: $white;	    
 	}
 }
 
 
 // Globle BTN Efect
+a{
+	border:none;
+	position: relative;	
+	text-decoration: none;
+	color: $white;
+	
+	&:hover{
+		text-decoration: none;
+		cursor: pointer;
+		color: $white;
+	}
 
+}
 .input-btn{
 	background:$button-color; 
 	color:$button-text;
@@ -69,10 +80,17 @@ Base Styles
 				top: 50%; left: 0; right: 0; bottom: 0;
 				width: 60%;
 				z-index: -1;
+				@include phone{
+					display: none;
+				}
 			}
 			span { 
 				background: $DealsSteals-bgColor;
 				padding: 0 15px; 
+				@include phone{
+					padding: 0;
+					font-size: 20px;
+				}
 			}
 		}
 		

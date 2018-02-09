@@ -18,6 +18,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        @include phone{
+          opacity: .85;
+        }
       }
       > .bg-widget-banner{
         background-image:url('#{$theme-assetPath}/2048x1365.jpg?111020173');
@@ -43,25 +46,62 @@
 // Home Page RightSide Banner Content info
 .banner-info-container{
   min-height: 538px;
-  ._banenrContent{
+  @include phone{
+    min-height: auto;
+    margin-top: 70px;
+  }
+  .banenrContent{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    h2{
+    padding-left: 30px;
+    @include phone{
+      left: 50%;
+      margin-left: -135px;
+    }
+    h1{
       font-size: 50px;
       color: $brightYellow;
       font-weight: $weight-semibold;
       @include text-shadow;
-      text-align: center;
       margin-bottom: 0;
+      span{ display: none;}
+      @include laptops{
+        font-size: 40px;
+      }
+      @include tablet{
+        font-size: 30px;
+      }
+      @include phone{
+        color: $searchWidget-txt;
+        font-size: 20px;
+        font-weight: $weight-medium;
+        text-align: center;
+        span{ display: block;}
+      }
     }
     .caption-label{
       font-size: 24px;
       color: $white;
       font-weight: $weight-normal;
       padding-left: 45px;
+      position: relative;
+      padding-left: 70px;
       @include text-shadow;
+      @include laptops{
+        font-size: 20px;
+      }
+      @include tablet{
+        font-size: 16px;
+      }
+      @include phone{
+        display: none;
+      }
+      .specialize{
+        position: absolute; 
+        left: 0;
+        @include spritPosition(-76px , -153px, 60px, 60px);
+      }
     }
   }
 

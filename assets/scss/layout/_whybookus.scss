@@ -44,10 +44,10 @@ WhyBookUs Styles
 }
 .WhyBookUs-bg{ 
 	background:$WhyBookUs-bgColor;	
-	padding:5px 15px 15px 15px;
-	h4{margin-bottom:5px;}
+	padding:0 15px 15px 15px;
+	h2{margin-bottom:5px; font-size: 18px; margin-top: 15px;}
 	p{
-		font-size: 13px;
+		font-size: 12px;		
 	}
 	@media only screen and (min-width : $tablet-width) and (max-width : $laptops-screen-md) {
 							min-height: 135px;
@@ -90,7 +90,7 @@ WhyBookUs Styles
 				}
 }
 .exclusiveDeals{
-	margin-top:10px;
+	margin-top:12px;
 	input[type]{ 
 		@extend .subscribe-input;
 	}
@@ -101,5 +101,32 @@ WhyBookUs Styles
 			@extend .padng-none;
 			border:none; 
 			 }
+	}
+}
+@include phone{
+	.subscribe-mob{
+		margin: -5px 0 20px 0 ;
+		h2{
+			font-size: 20px;
+		}
+		p{
+			font-size: 12px;
+			span{
+				color: $brightYellow;
+			}
+		}
+		.emailSubmit{
+			float: left;
+			width: 85%;
+			@include border-radius(0);
+		}
+		.submit{
+			width: 15%;
+			background: $button-color;
+			border: 0;
+			.mailIcon{
+				@include spritPosition(-9px, -377px, 35px, 27px);
+			}
+		}
 	}
 }
