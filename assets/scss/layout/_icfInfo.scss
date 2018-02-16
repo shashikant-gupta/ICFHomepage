@@ -1,18 +1,25 @@
 /*******************
 Icheapflight info Styles
 *********************/
+
 .icf-info{ 
 	text-align:center;
-	@include fullRow ; 
-	.subHeading, p{ color:$color-main;}
+	@include fullRow ;
+
+	.subHeading, p{ 
+		color:$color-main;
+	}
+
 	h3{
 		color:$heading-txt;
+
 		@include phone{
 			font-size: $font-size-regular;
 		}
 	}
 	@include phone{
 		text-align: left;
+		margin-bottom: 30px;
 	}
 	
 }
@@ -23,36 +30,48 @@ Icheapflight info Styles
 	line-height:50px;
 	color:$heading-txt;	
 	font-size:32px;	 
+
 	@include phone{
-		font-size: 20px;		
+		font-size: 20px;
+
+		&.marg-top-btm30{
+			margin: 0;
+		}	
 	}
-	 .connect{ display:inline-block; 
-	 	       vertical-align: top;
-	 	       margin-top: 7px;
-	 	       @media screen and (max-width: $tablet-width) {	    	  				
-	    	  				display: block
-	    	            } 
-	 	    }
-	 a {
-			span.fb{ @include spritPosition(-73px, -73px, 63px, 63px); }
-			span.tw{ @include spritPosition(-3px, -73px, 63px, 63px); }
-			span.gp{ @include spritPosition(-144px, -73px, 63px, 63px); }
-			span.pt{ @include spritPosition(-4px, -152px, 63px, 63px); }
-			span{
-				&:hover{
-					-webkit-filter: grayscale(100%);
-					filter: grayscale(100%);
-					-webkit-transition: .3s ease-in-out;
-					transition: .3s ease-in-out;
-				}
+
+	.connect{ 
+		display:inline-block; 
+	 	vertical-align: top;
+		 margin-top: 7px;
+		 
+	 	@media screen and (max-width: $tablet-width) {	    	  				
+	    	display: block
+	    } 
+	}
+	
+	a {
+		span.fb{ @include spritPosition(-73px, -73px, 63px, 63px); }
+		span.tw{ @include spritPosition(-3px, -73px, 63px, 63px); }
+		span.gp{ @include spritPosition(-144px, -73px, 63px, 63px); }
+		span.pt{ @include spritPosition(-4px, -152px, 63px, 63px); }
+		
+		span{
+			
+			&:hover{
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				-webkit-transition: .3s ease-in-out;
+				transition: .3s ease-in-out;
 			}
-			@include phone{
+		}
+
+		@include phone{
 			span.fb{ @include spritPosition(-54px, -54px, 50px, 50px); }
 			span.tw{ @include spritPosition(-1px, -54px, 50px, 50px); }
 			span.gp{ @include spritPosition(-106px, -54px, 50px, 50px); }
 			span.pt{ @include spritPosition(-1px, -115px, 50px, 50px); }
 			span.fb, span.tw, span.gp, span.pt{ background-size: 225px 315px;}
-			}
 		}
+	}
 
 }

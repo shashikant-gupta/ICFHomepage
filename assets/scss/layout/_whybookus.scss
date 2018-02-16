@@ -1,7 +1,9 @@
 /*******************
 WhyBookUs Styles
 *********************/
-.WhyBookUs-row{ background: $darkBlue;}
+.WhyBookUs-row{ 
+	background: $darkBlue;
+}
 .latesteals-warp { 
 	position:relative;
 	color:$white;
@@ -9,13 +11,14 @@ WhyBookUs Styles
 	font-weight:normal;
 	@extend .fullWidth;
 	.deals-content {
-		 background: rgba($black, 0.5);
-		 position:absolute;
-		 bottom:0; 
-		 width:100%;
-		 padding:5px 15px;
-		 display: table;
-		 ul{
+		background: rgba($black, 0.5);
+		position:absolute;
+		bottom:0; 
+		width:100%;
+		padding:5px 15px;
+		display: table;
+
+		ul{
 		 	list-style-type: none;
 		 	outline: none;
 		 	padding:0;
@@ -26,104 +29,125 @@ WhyBookUs Styles
 			 	display: table-cell;
 			 	font-size: 14px;
 			 	vertical-align: bottom;
-			 	@extend .positionRel;
-				 	strong{ 
-				 		color: $yellow;
-				 	}
-				 	span{ 
-				 		font-size:18px;
-				 	}
+				 @extend .positionRel;
+				 
+				strong{ 
+				 	color: $yellow;
+				}
+
+				span{ 
+				 	font-size:18px;
+				}
 		 	}
-		 }
-		 .lastDeal-price{
+		}
+		.lastDeal-price{
 		 	display:table-cell;
 		 	vertical-align: bottom;		 	
-		 	
-		 }
+		}
 	}
 }
 .WhyBookUs-bg{ 
 	background:$WhyBookUs-bgColor;	
 	padding:0 15px 15px 15px;
-	h2{margin-bottom:5px; font-size: 18px; margin-top: 15px;}
+	h2{
+		margin-bottom:5px; 
+		font-size: 18px; 
+		margin-top: 15px;
+	}
 	p{
 		font-size: 12px;		
 	}
 	@media only screen and (min-width : $tablet-width) and (max-width : $laptops-screen-md) {
-							min-height: 135px;
-							display: block;
-						}
+		min-height: 135px;
+		display: block;
+	}
 }
 	
-	.whyBookUs-Icon{
-		margin-top: 15px;
-		display: inline-block;
+.whyBookUs-Icon{
+	margin-top: 15px;
+	display: inline-block;
 		
 	&.icf-spritimg{
-        @include spritPosition(-131px, -135px, 85px, 85px);    
-        @media screen and (max-width: $desktop-screen-lg) {
-    	  	display: none;
-    	  }	    	  
-    	}	
-    	  	
+    	@include spritPosition(-131px, -135px, 85px, 85px);    
+    	@media screen and (max-width: $desktop-screen-lg) {
+    		display: none;
+    	}	    	  
+	}    	  	
 }
+
 .whyBookUs-txt{ 
- @media screen and (max-width: $desktop-screen-lg) {
- 	width: 100%;
- }
+ 	@media screen and (max-width: $desktop-screen-lg) {
+ 		width: 100%;
+ 	}
 	width:73%; 				
-				color:$white;
-				ul{ list-style-type:none;
-					padding-left:0;
-					margin:0;
-					li{ 
-						line-height:20px;						
-						font-size: 10px;
-						&:before{
-							display:inline-block;
-							content:'-';
-						}
-						 @media only screen and  (max-width : $laptops-screen-md) and (min-width : $tablet-width) {
-						 	line-height: 13px;
-					 	 }							
-					}
-				}
+	color:$white;
+
+	ul{ list-style-type:none;
+		padding-left:0;
+		margin:0;
+
+		li{ 
+			line-height:20px;						
+			font-size: 10px;
+
+			&:before{
+				display:inline-block;
+				content:'-';
+			}
+
+			@media only screen and  (max-width : $laptops-screen-md) and (min-width : $tablet-width) {
+				line-height: 13px;
+			}							
+		}
+	}
 }
+
 .exclusiveDeals{
 	margin-top:12px;
+
 	input[type]{ 
 		@extend .subscribe-input;
 	}
+
 	span{ 
 		background:$button-color; 
 		.btn{ 
 			@extend .input-btn;	
 			@extend .padng-none;
 			border:none; 
-			 }
+		}
 	}
 }
+
 @include phone{
+
 	.subscribe-mob{
 		margin: -5px 0 20px 0 ;
+
 		h2{
 			font-size: 20px;
 		}
+
 		p{
 			font-size: 12px;
+			padding-bottom: 10px;
+
 			span{
 				color: $brightYellow;
 			}
 		}
+
 		.emailSubmit{
 			float: left;
 			width: 85%;
 			@include border-radius(0);
 		}
+
 		.submit{
 			width: 15%;
 			background: $button-color;
 			border: 0;
+			
 			.mailIcon{
 				@include spritPosition(-9px, -377px, 35px, 27px);
 			}

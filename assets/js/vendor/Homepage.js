@@ -38,3 +38,11 @@ $(document).on("scroll", function() {
           $("#header").removeClass("smallHeader");
         }
       });
+////////////////////////////////////////// MOb nav //////////////////////////////////////////////////////////////////////
+$('#menu-overlay').css('right','-500'+$(window).width()+'px');
+$('#menu-overlay').on('shown.collapse.bs', (function(){
+  $(this).css('right','0');
+}))
+$('#menu-overlay').on('hidden.collapse.bs', (function(){
+  $('#menu-overlay').css('right','-500'+$(window).width()+'px');
+}))

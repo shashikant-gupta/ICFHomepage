@@ -39,29 +39,36 @@
     <header id="header" class="container-fluid">
       <div class="container">
         <div class="row">
-          <a href="#" class="logo pull-left"><img src="./assets/images/icons/icf_logo.png" alt="myflightsearch"></a>
+          <div class="pull-left logo">
+              <a href="#"><img src="./assets/images/icons/icf_logo.png" alt="IcheapFlight"></a>
+          </div>
           
-          <a id="nav-toggle" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar" href="#"><span></span></a>
+          
+          <a id="nav-toggle" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#mob-Navbar, #menu-overlay" href="#"><span></span></a>
 
-          <div class="col-sm-4 col-md-3 pull-right call-support text-center hidden-xs">
+          <div class="col-sm-4 col-md-3 pull-right call-support text-right padng-none hidden-xs">
             <div class="support">
               <a href="#"><span class="cust-support spritIcon"></span> Customer Support</a> <a href="#"><span class="Reservations spritIcon"></span> My Reservations</a>
             </div>
             <a href="" class="toll-free" title="Call Us 24/7 for Lowest Airfares"><span class="spritIcon"></span>1-855-757-9193</a>
           </div>
 
-          <a href="tel:18557579193" class="btn-mobile-call visible-xs">Call </a>
+          <a href="tel:18557579193" class="btn-mobile-call visible-xs pull-right">Call </a>
 
-          <nav class="col-lg-6 col-xs-12 pull-right collapse navbar-collapse " id="myNavbar">
-            <a href=""> <span>Flights</span></a>
-            <a href=""> <span>Travel Deals</span> </a>
-            <a href=""> <span>Top US Destinations</span> </a>
-          </nav>
-
+          <div class="col-sm-6 col-xs-12 pull-right padng-none">
+            <nav class="pull-right collapse navbar-collapse icfNavbar" id="mob-Navbar">
+              <ul>
+                <li> <a href=""> <span>Flights</span></a></li>
+                <li><a href=""> <span>Travel Deals</span> </a></li>
+                <li><a href=""> <span>Top US Destinations</span> </a></li>
+              </ul>
+            </nav>
+          </div>   
         </div>
-      </div>      
+      </div>  
     </header><!-- /header -->
-
+    <div id="menu-overlay" class="collaps"></div>    
+    <div class="clearfix"></div>
      <section id="widget-banner">
       <div class="bg-holder full-page">
         <div class="bg-mask"></div>
@@ -70,7 +77,20 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-md-6">
+               <!-- search info-title-->
+               <div class="col-sm-6  col-xs-12 banner-info-container pull-right">
+                  <div class="banenrContent">
+                      <h1>BOOK NOW & SAVE! <span>Exclusive Flights Deals</span></h1>
+                                               
+                      <div class="caption-label">
+                          <span class="spritIcon specialize"></span>                        
+                          <p>We Specialize in finding the<br/>
+                              Best Flight Deals Anywhere. Guaranteed.</p>
+                      </div>
+                  </div>
+              </div><!--//search info-title-->
+
+              <div class="col-sm-6 col-xs-12">
                 <!-- Search Widget -->
                 <div id="search-widget" class="icf_SearchWidgetWarp mt70">
                   <h2>Book a Cheap Flight</h2>
@@ -225,17 +245,7 @@
 
                 </div>
                 <!-- //Search Widget -->
-              </div>
-                <!-- search info-title-->
-              <div class="col-md-6 banner-info-container">
-                  <div class="_banenrContent">
-                      <h2>BOOK NOW & SAVE!</h2>
-                      <div class="caption-label">
-                          <p><span></span>We Specialize in finding the<br/>
-                              Best Flight Deals Anywhere. Guaranteed.</p>
-                      </div>
-                  </div>
-              </div><!--//search info-title-->
+              </div>               
 
             </div>
           </div>
@@ -246,10 +256,10 @@
     <div class="clearfix"></div>
     <section class="WhyBookUs-row container-fluid"> 
     <div class="container ">
-      <div class="row marg-top-btm30">
+      <div class="row marg-top-btm30 hidden-xs">
 
-        <div class="col-sm-4 col-xs-6 padng-left padng-right5">
-          <article class="latesteals-warp">
+        <article class="col-sm-4 col-xs-6 padng-right5">
+          <div class="latesteals-warp">
             <figure>
               <img src="./assets/images/latestDeals.jpg" width="100%"  height="134" alt="Top Deals"/>
             </figure>
@@ -261,14 +271,14 @@
               <!-- <span class="lastDeal-txt"><strong></strong> <br> <strong></strong> </span>
               <span class="lastDeal-price"> </span> -->
             </div>
-          </article>
-        </div>
+          </div>
+        </article>        
 
-        <div class="col-sm-4 col-xs-6 padng5">
-          <article class="WhyBookUs-bg clearfix latesteals-warp">
+        <article class="col-sm-4 col-xs-6 padng5">
+          <div class="WhyBookUs-bg clearfix latesteals-warp">
               <span class="icf-spritimg whyBookUs-Icon spritIcon">  </span>
               <div class="whyBookUs-txt pull-right">
-                <h4>Why Book With Us?</h4>
+                <h2>Why Book With Us?</h2>
                 <ul>
                   <li> We specialize in flights to find the lowest fares</li >
                   <li> Get exclusive, unpublished domestic flight deals</li >
@@ -276,12 +286,12 @@
                   <li> 24 / 7 Customer Service and Support</li >
                 </ul>                
             </div>              
-          </article>                                 
-        </div>
+          </div>                                 
+        </article>
 
-        <div class="col-sm-4 padng-right padng-left5">
-          <article class="latesteals-warp WhyBookUs-bg padng15">
-            <h4>Exclusive Deals</h4>
+        <article class="col-sm-4 padng-left5">
+          <div class="latesteals-warp WhyBookUs-bg padng15">
+            <h2>Exclusive Deals</h2>
             <p>Sign up and get the latest deals - delivered right to your inbox.</p>
             <form role="form">
               <div class="input-group exclusiveDeals">
@@ -290,576 +300,596 @@
               </div>
               
             </form>
-          </article>          
-        </div>
+          </div>          
+        </article>
 
-    </div>    
+    </div>  
+    
+    <div class="row">
+        <article class="col-xs-12 padng-none subscribe-mob latesteals-warp visible-xs ">
+            <h2>Sign Up</h2>
+            <p>For Handpicked Flight Deals, Discount
+                Coupons & other offers, 
+                <span>Subscribe with us!</span>
+            </p>
+            <div class="clearfix">
+              <input type="text" class="form-control emailSubmit" placeholder="Enter your e-mail address">
+              <button class="submit"><span class="spritIcon mailIcon"></span></button>
+            </div>  
+        </article>
+    </div>
+    
     </div>
   </section>
  
 
     <div class="clearfix"></div>
     <!-- Deals & Steals -->
-    <section class="container-bg container-fluid">
+    <section class="container-bg container-fluid mob-border-top">
       <div class="container">
           <div class="row">
             <article class="deal-container">
               <!-- Heading Text -->
-              <div class="dealHeading text-center">
+              <div class="dealHeading text-center hidden-xs">
                 <h1 class="background-line"> <span>Deals & Steals</span> </h1>
                 <p class="subHeading">Our Absolute Lowest Fares - Updated Daily!</p>
               </div>
               <!-- Heading Text close -->
 
-             <section class="clearfix tab">
-               <ul class="dealTabs">
-                <li  class="filter-deals active" data-filter="hot-deal">HOT/Trending</li>
-                <li  class="filter-deals" data-filter="domestic-deal">Domestic</li>
-                <li  class="filter-deals" data-filter="international-deal">International</li>
-                <li  class="filter-deals" data-filter="morDeals-deal">More Deals</li>
-              </ul>
-
-              <div class="icfstatic_deals clearfix">
-                <!-- 1st -->
-                <div class="tabs_item">
+             <section class="clearfix tab">  
+              <div id="horizontalTab">
+                <ul class="resp-tabs-list">
+                  <li  class="filter-deals" data-filter="hot-deal">HOT/Trending</li>
+                  <li  class="filter-deals" data-filter="domestic-deal">Domestic</li>
+                  <li  class="filter-deals" data-filter="international-deal">International</li>
+                  <li  class="filter-deals" data-filter="morDeals-deal">More Deals</li>
+                </ul>
+                <div class="resp-tabs-container clearfix">
+                <div>
                   <ul>
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
 
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/6.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-                </ul> 
-                </div> 
-                <!-- 1close -->
-                <!-- 2nd -->
-                <div class="tabs_item">
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+                  </ul> 
+                </div>
+                
+                <div>
                   <ul>
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/6.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-                </ul> 
-                </div> 
-                <!-- 2nd -->
-                <!-- 3rd -->
-                <div class="tabs_item">
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/6.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+                  </ul> 
+                </div>
+                
+                <div>
                   <ul>
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/6.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-                </ul>  
-                </div> 
-                <!-- 3rd close -->
-                <!-- 4th -->
-                <div class="tabs_item">
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+                  </ul> 
+                </div>
+                
+                <div>
                   <ul>
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
 
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+  
+                    <li>                    
+                      <figure class="effect-layla">
+                         <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
+                         <figcaption>
+                           <!-- <h2>Crazy <span>Layla</span></h2> -->
+                           <div class="dealsDeatails">
+                            <h4>New York to Orlando</h4>
+                            Flights From <span>$52.38</span> 
+                          </div> 
+                          <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
+                          <button class="icf-effect-btn btn-white"> See Deal </button>
+                            <a href="#">View more</a>
+                          </figcaption>     
+                      </figure>
+                    </li>
+                  </ul> 
+                </div>
 
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/3.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
+              </div>
+                </d>
+            </article>
 
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/4.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
+          </div>
+      </div>      
+    </section>
+      <!-- Deals & Steals Close -->
 
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/5.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/6.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/1.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-
-                  <li>                    
-                    <figure class="effect-layla">
-                       <img src="assets/images/IndexDeals/2.jpg" class="img-responsive"/>
-                       <figcaption>
-                         <!-- <h2>Crazy <span>Layla</span></h2> -->
-                         <div class="dealsDeatails">
-                          <h4>New York to Orlando</h4>
-                          Flights From <span>$52.38</span> 
-                        </div> 
-                        <!--  <p>When Layla appears, she brings an eternal summer along.</p> -->
-                        <button class="icf-effect-btn btn-white"> See Deal </button>
-                          <a href="#">View more</a>
-                        </figcaption>     
-                    </figure>
-                  </li>
-                </ul>  
-                </div> 
-                <!-- 4th close -->
-                 </div>                                    
-              </section>
-          </article>
-
-          <!-- Icf Info -->
+<!-- Icf Info -->
+      <section class="container-bg container-fluid mobBg-white">
+        <div class="container">
+            <div class="row">
+          
           <article class="icf-info marg-top30">
             <!-- Heading Text -->
-            <div class="dealHeading text-center">
+            <div class="dealHeading">
               <h1 class="background-line"> <span> iCheapFlight </span> </h1>
               <span class="subHeading">Search and compare the cheapest flights from 1000 s of airlines, travel agents and travel sites.</span>
             </div>
@@ -884,25 +914,33 @@
           </div>
 
           </article>  
-          <!-- Icf Info -->
+         
+</div>
+</div>
+</section> 
+<!-- Icf Info -->
 
           <!-- Social Icon -->
+          <section class="container-bg container-fluid">
+            <div class="container">
+                <div class="row">
           <section class="social-icon text-center marg-top-btm30">
               <span class="connect">Connect with us:</span> &nbsp; &nbsp; <a href="#"><span class="fb spritIcon"></span></a> <a href="#"><span class="tw spritIcon"></span></a> <a href="#"><span class="gp spritIcon"></span></a> <a href="#"><span class="pt spritIcon"></span></a>
+          </section>
+          </div>
+          </div>
           </section>
           <!-- Social Icon close -->
 
 
-        </div>
-      </div>      
-    </section>
-    <!-- Deals & Steals Close -->
+        
 
     <!-- Footer -->
-    <footer class="footer-bg container-fluid">
-      <div class="container">
+    <footer>
+      <div class="footer-bg  mobBg-white container-fluid ">
+       <div class="container">
         <div class="row padng-top-btm30">
-          <div class="col-md-3 col-sm-6 col-xs-6 sitemap ">
+          <div class="col-md-3 col-sm-6 col-xs-12 sitemap ">
             <h4>About Icheapflight</h4>
             <ul>
               <li><a href="#">About us</a></li>
@@ -913,7 +951,7 @@
               <li><a href="#">Best Price Guarantee</a></li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6  sitemap">
+          <div class="col-md-3 col-sm-6 col-xs-12  sitemap">
             <h4>Top Destinations</h4>
             <ul>
               <li><a href="#">About us</a></li>
@@ -924,7 +962,7 @@
               <li><a href="#">Best Price Guarantee</a></li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6 sitemap">
+          <div class="col-md-3 col-sm-6 col-xs-12 sitemap">
             <h4>Top Airlines</h4>
             <ul>
               <li><a href="#">About us</a></li>
@@ -936,7 +974,7 @@
             </ul>
 
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6 signup">
+          <div class="col-md-3 col-sm-6 col-xs-12 signup hidden-xs">
             <h5>Sign up for Exclusive Email-Only deals!</h5>
            
             <div class="input-group tfoot-subscribe">
@@ -949,31 +987,48 @@
             <span class="callus-txt">Book Online or Call us 24x7</span>
             <h3>1-855-757-9193</h3>
           </div>
-        </div>                
+        </div> 
+       </div>
+    </div>
 
-      </div>
-      
-      <div class="top-border padng-top30 partners-row padng-btm30">
+    <div class="footer-bg container-fluid padng-top20 ">
+        <div class="container">
+        <div class="row">
+            <article class="col-xs-12 padng-none subscribe-mob latesteals-warp visible-xs ">
+                <p>For Handpicked Flight Deals, Discount
+                    Coupons & other offers, 
+                    <span>Subscribe with us!</span>
+                </p>
+                <div class="clearfix">
+                  <input type="text" class="form-control emailSubmit" placeholder="Enter your e-mail address">
+                  <button class="submit"><span class="spritIcon mailIcon"></span></button>
+                </div>  
+            </article>
+        </div>
+    </div>
+    </div>
+
+      <div class="top-border partners-row padng-top-btm30 footer-bg container-fluid">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-xs-12 col-sm-2 text-center">
+          <div class="col-md-3 col-xs-12 col-sm-2 text-center hidden-xs">
             <img src="./assets/images/icons/icf_logo.png" alt="icheapflight">
           </div>
-          <div class="col-md-6 text-center col-xs-12 col-sm-6 text-center">
-            <p> Icheapflight partners with Transam Travel and Tours, a certified IATA, IATAN, ARC </p>
-            <span class="payment-icon spritIcon"> </span>
-            <p> © 2017 - 2018, Icheapflight. All rights reserved. </p>
-          </div>
-          <div class="col-md-3 col-xs-12 col-sm-4 text-center">
+          
+          <div class="col-md-3 col-xs-12 col-sm-4 text-center pull-right ">
             We assure safe and secure transactions 
             through powerful Norton Certification.
-
+          </div>
+          <div class="col-md-6 text-center col-xs-12 col-sm-6">
+              <p> Icheapflight partners with Transam Travel and Tours, a certified IATA, IATAN, ARC </p>
+              <span class="payment-icon spritIcon"> </span>
+              <p> © 2017 - 2018, Icheapflight. All rights reserved. </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="top-border padng-top30 partners-row note-txt padng-btm30">
+    <div class="top-border partners-row note-txt padng-top-btm30 footer-bg container-fluid">
       <div class="container">
         <div class="row">
           <p>* Fares are round trip, Fares incl. all fuel surcharges, our service fees and taxes. Book flights 21 days in advance. Displayed fares are based on historical data, are subject to change and cannot be
@@ -986,7 +1041,6 @@ guaranteed at the time of booking.</p>
     </footer>
     <!-- Footer close -->
 
-
 <!-- jQuery (necessary plugins here) -->
 <script type="text/javascript" src="assets/js/vendor/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="assets/js/vendor/jquery-ui.min.js"></script>
@@ -994,5 +1048,44 @@ guaranteed at the time of booking.</p>
 <script type="text/javascript" src="assets/js/vendor/animation.min.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <script type="text/javascript" src="assets/js/vendor/Homepage.js"></script>
+<script type="text/javascript" src="assets/js/easy-responsive-tabs.js"></script>
+
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+</script>
 </body>
 </html>

@@ -24,16 +24,17 @@ nav{
          }  
 
         &::after{
-            background: $button-color;
-            content: "";
-            display: block;
+            background: $button-color; 
+            content: " ";         
+            display: block;            
             height: 100%;
             left: 0;            
             position: absolute;          
             top: -150px;           
             transition: all 0.5s;
             width: 100%;
-            z-index: 0;
+            z-index: 0;      
+            
         }
 
         &:hover::after{
@@ -41,7 +42,7 @@ nav{
             display: block;
             height: 100%;
             left: 0;            
-            top: 0;            
+            top: 0;                       
         }
 
         span{
@@ -58,8 +59,10 @@ nav{
 
 @include phone{
     #nav-toggle { 
-        padding: 10px 15px 16px 0px; 
+        padding: 10px 0px 16px 0px; 
         margin-top:15px;
+        margin-right: 0;
+        width: 32px;
     }
 
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
@@ -95,30 +98,35 @@ nav{
     }
     .icfNavbar{
         padding: 20px 0;
+
         &.navbar-collapse{
             overflow: inherit;
             width: 60%;
             clear: both;
             background: $header-bg;
             position: absolute;
-            right: -60%;
-            top: 50px;
+            right: -70%;
             height: 700px !important;
             z-index: 9991;
-            transition: right 1s;
+            transition: right 0.3s;
             display: block;
+
             &.in{
-                right: 0;
+                right: -6%;
             }
         }
         ul{
             width: 100%;
             float: $left;
+
             li{
                 display: block;
                 padding: 10px 0;
+
                 a{
-                   &::before, &::after{ display: none;}
+                    &::before, &::after{ 
+                       display: none;
+                    }
                    &:hover span, &.active span{
                        color: $text-hover;
                    }

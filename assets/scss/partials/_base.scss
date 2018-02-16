@@ -14,7 +14,9 @@ Base Styles
 .padng-top-btm30{ padding-top:30px; padding-bottom:30px;}
 .padng-top30{ padding-top:30px;}
 .padng-btm30{ padding-bottom:30px;}
+.padng-top-btm30{ padding-top:30px; padding-bottom:30px;}
 .padng-20{padding-left: 20px; padding-right: 20px;}
+.padng-top20{padding-top: 20px;}
 .marg-top-btm30{ margin-top:30px; margin-bottom:30px;}
 .marg-btm30{ margin-bottom:30px;}
 .marg-top30{ margin-top:30px;}
@@ -27,9 +29,11 @@ Base Styles
 .mt15{margin-top: 15px !important;}
 .mt10{margin-top: 10px !important;}
 //
+
 .spritIcon{
 	@include spritImg;
 }
+
 .container-bg{
 	background:$DealsSteals-bgColor;	
 	font-family: $Montserrat;
@@ -54,44 +58,100 @@ a{
 	}
 
 }
+
 .input-btn{
 	background:$button-color; 
 	color:$button-text;
 	@include text-shadow($tShadow : 0 0 0 rgba(0,0,0,.8));
 	cursor:pointer;
 }
+
 .subscribe-input{
 	@include box-shadow(none);		
-		@include placeholder($placeholder-color, 12px) ;
+	@include placeholder($placeholder-color, 12px) ;
 }
 
-.dealHeading{
-		@extend .marg-btm30;
-		h1.background-line {
-			position: relative;
-			z-index: 1;
+@include phone{
+
+	.mobBg-white{		
+		background: $white !important;
+
+		.dealHeading{
 			margin-bottom: 0;
 
-			&:before {
-				border-top: 2px solid #dfdfdf;
-				content:"";
-				margin: 0 auto;
-				position: absolute; 
-				top: 50%; left: 0; right: 0; bottom: 0;
-				width: 60%;
-				z-index: -1;
-				@include phone{
-					display: none;
-				}
-			}
-			span { 
-				background: $DealsSteals-bgColor;
-				padding: 0 15px; 
-				@include phone{
-					padding: 0;
-					font-size: 20px;
+			h1.background-line{
+				color: $medium-black;
+
+				span{
+					background: none;
 				}
 			}
 		}
-		
+
+		.marg-top30{ 
+			margin-top: 0;
+		}
+
+		h3, h4{ 
+			color: $darkGray !important;
+		}
+		.subHeading, p{
+			color: $a3a3a3 !important;
+			font-size: 12px;
+		}
 	}
+}
+.dealHeading{
+	@extend .marg-btm30;
+
+	h1.background-line {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 0;
+
+		&:before {
+			border-top: 2px solid #dfdfdf;
+			content:"";
+			margin: 0 auto;
+			position: absolute; 
+			top: 50%; left: 0; right: 0; bottom: 0;
+			width: 60%;
+			z-index: -1;
+
+			@include phone{
+				display: none;
+			}
+		}
+		
+		span { 
+			background: $DealsSteals-bgColor;
+			padding: 0 15px; 
+
+			@include phone{
+				padding: 0;
+				font-size: 20px;
+			}
+		}
+	}
+		
+}
+
+#menu-overlay{	
+	background: rgba(0,0,0,0.8);
+	display: block;   
+    height: 100% !important;
+    position: fixed;
+	right: -700px;
+	top: 0;
+	transition: 0.1s;
+    -webkit-transition: 0.1s;
+	width: 100%;
+	z-index: 52;	
+}
+
+@include phone{
+	
+	.mob-border-top{ 
+		border-top:1px solid $white; 
+	}
+}

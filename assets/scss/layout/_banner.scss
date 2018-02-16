@@ -3,6 +3,9 @@
   @extend .positionRel;
   //overflow: hidden;
   height: 600px;
+  @include phone{
+    height: auto;
+  }
     .bg-holder{
       //overflow: hidden;
       @extend .positionRel;
